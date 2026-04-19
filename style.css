@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros | Plásticos Cortazarenses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --azul-oscuro:  #0a1628;
+    --azul-medio:   #0f2a52;
+    --azul-fuerte:  #1a4480;
+    --azul-vivo:    #1d6ab8;
+    --azul-claro:   #3d8fd4;
+    --azul-cielo:   #72b8e8;
+    --blanco:       #ffffff;
+    --gris-texto:   #8ea8c3;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV (igual en todas las páginas) ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 72px;
+    background: rgba(10, 22, 40, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(61, 143, 212, 0.15);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 18px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--blanco); line-height: 1.1;
+  }
+  .nav-logo-text span { color: var(--azul-claro); font-weight: 300; font-size: 13px; display: block; letter-spacing: 0.12em; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 400;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--gris-texto); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.activo { color: var(--azul-claro); }
+  .nav-cta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--blanco); background: var(--azul-vivo);
+    border: none; padding: 10px 24px;
+    cursor: pointer; text-decoration: none; transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--azul-claro); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    padding: 100px 60px 32px;
+    background: var(--azul-oscuro);
+    border-bottom: 1px solid rgba(61, 143, 212, 0.12);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .page-breadcrumb {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; font-weight: 400;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gris-texto);
+    text-decoration: none;
+  }
+  .page-breadcrumb:hover { color: var(--azul-claro); }
+  .page-sep {
+    color: rgba(61,143,212,0.4);
+    font-size: 12px;
+  }
+  .page-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--azul-claro);
+  }
+
+  /* ── SECCIÓN INTRO ── */
+  .section { padding: 80px 60px; }
+  .section-alt { background: var(--azul-medio); }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .section-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--azul-claro); margin-bottom: 16px;
+  }
+  .section-tag::before { content: ''; display: block; width: 28px; height: 1px; background: var(--azul-claro); }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 700; line-height: 1;
+    text-transform: uppercase; margin-bottom: 24px;
+  }
+  .section-title span { color: var(--azul-claro); }
+
+  .section-body {
+    font-size: 16px; font-weight: 300;
+    line-height: 1.8; color: rgba(255,255,255,0.65);
+    margin-bottom: 20px;
+  }
+
+  /* ── MISIÓN VISIÓN VALORES ── */
+  .mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .mvv-card {
+    background: var(--azul-fuerte);
+    padding: 52px 40px;
+    border: 1px solid rgba(61, 143, 212, 0.1);
+    transition: border-color 0.2s;
+  }
+  .mvv-card:hover { border-color: rgba(61, 143, 212, 0.4); }
+
+  .mvv-icono {
+    font-size: 28px; margin-bottom: 20px; display: block;
+  }
+
+  .mvv-titulo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--azul-claro); margin-bottom: 16px;
+  }
+
+  .mvv-texto {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px; font-weight: 700;
+    text-transform: uppercase; line-height: 1.15;
+    color: var(--blanco); margin-bottom: 20px;
+  }
+
+  .mvv-desc {
+    font-size: 14px; font-weight: 300;
+    line-height: 1.7; color: rgba(255,255,255,0.6);
+  }
+
+  .mvv-linea {
+    width: 32px; height: 2px;
+    background: var(--azul-claro);
+    margin-bottom: 20px;
+  }
+
+  /* ── VALORES ── */
+  .valores-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+  }
+
+  .valor-card {
+    background: var(--azul-medio);
+    border: 1px solid rgba(61, 143, 212, 0.12);
+    padding: 36px 28px;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .valor-card:hover {
+    border-color: rgba(61, 143, 212, 0.4);
+    transform: translateY(-3px);
+  }
+
+  .valor-icono { font-size: 32px; margin-bottom: 16px; display: block; }
+
+  .valor-nombre {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    color: var(--blanco); margin-bottom: 10px;
+  }
+
+  .valor-desc {
+    font-size: 13px; font-weight: 300;
+    line-height: 1.6; color: rgba(255,255,255,0.5);
+  }
+
+  /* ── PROCESO ── */
+  .proceso-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 56px;
+  }
+
+  .proceso-paso {
+    padding: 44px 36px;
+    border: 1px solid rgba(61, 143, 212, 0.1);
+    position: relative;
+  }
+  .proceso-paso:hover { background: rgba(29, 106, 184, 0.08); }
+
+  .proceso-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px; font-weight: 700;
+    color: rgba(61, 143, 212, 0.15);
+    line-height: 1; margin-bottom: 16px;
+  }
+
+  .proceso-nombre {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px; font-weight: 700;
+    text-transform: uppercase; color: var(--blanco);
+    margin-bottom: 10px;
+  }
+
+  .proceso-desc {
+    font-size: 14px; font-weight: 300;
+    line-height: 1.6; color: rgba(255,255,255,0.55);
+  }
+
+  /* ── CTA FINAL ── */
+  .cta-final {
+    padding: 80px 60px;
+    background: var(--azul-fuerte);
+    text-align: center;
+    border-top: 1px solid rgba(61, 143, 212, 0.2);
+  }
+  .cta-titulo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 700; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .cta-titulo span { color: var(--azul-claro); }
+  .cta-desc {
+    font-size: 16px; font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    max-width: 480px; margin: 0 auto 36px;
+    line-height: 1.7;
+  }
+
+  .btn-primary {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--blanco); background: var(--azul-vivo);
+    border: none; padding: 16px 36px;
+    cursor: pointer; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--azul-claro); transform: translateY(-1px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #060f1c;
+    padding: 40px 60px;
+    display: flex; align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(61, 143, 212, 0.1);
+  }
+  .footer-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 16px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .footer-logo span { color: var(--azul-claro); }
+  .footer-text { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.3); }
+  .footer-dir { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.3); text-align: right; }
+
+  /* ── ANIMACIONES ── */
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    .page-hero, .section, .cta-final { padding-left: 24px; padding-right: 24px; }
+    .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+    .mvv-grid { grid-template-columns: 1fr; }
+    .valores-grid { grid-template-columns: 1fr 1fr; }
+    .proceso-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+      <rect x="1" y="1" width="36" height="36" rx="8" fill="rgba(29,106,184,0.15)" stroke="rgba(61,143,212,0.5)" stroke-width="1"/>
+      <circle cx="19" cy="19" r="13" stroke="#3d8fd4" stroke-width="1.5" fill="none"/>
+      <circle cx="19" cy="19" r="9" stroke="#1d6ab8" stroke-width="1" fill="none"/>
+      <text x="19" y="24" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="15" fill="#72b8e8">P</text>
+    </svg>
+    <div class="nav-logo-text">
+      Plásticos Cortazarenses
+      <span>Empaques Flexibles</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="nosotros.html" class="activo">Nosotros</a></li>
+    <li><a href="mercados.html">Mercados</a></li>
+    <li><a href="productos.html">Productos</a></li>
+    <li><a href="soluciones.html">Soluciones</a></li>
+    <li><a href="porque-nosotros.html">¿Por qué nosotros?</a></li>
+    <li><a href="clientes.html">Clientes</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <a href="contacto.html" class="nav-cta">Cotizar</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <a href="index.html" class="page-breadcrumb">Inicio</a>
+  <span class="page-sep">›</span>
+  <span class="page-title">Nosotros</span>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="intro-grid">
+    <div class="fade-in">
+      <div class="section-tag">Nuestra historia</div>
+      <h2 class="section-title">Más de 20 años <span>fabricando</span> junto a ti</h2>
+      <p class="section-body">
+        Somos Plásticos Cortazarenses, una empresa 100% mexicana con raíces en Cortazar, Guanajuato.
+        Nacimos con el compromiso de acompañar a nuestros clientes en cada pedido — 
+        desde el más sencillo hasta el más urgente.
+      </p>
+      <p class="section-body">
+        A lo largo de más de dos décadas hemos construido relaciones de confianza con productores, 
+        distribuidores e industriales de todo México. Nuestra fortaleza no es solo la máquina — 
+        es el equipo humano que hay detrás de cada empaque.
+      </p>
+    </div>
+    <div class="fade-in" style="background: linear-gradient(135deg, var(--azul-medio), var(--azul-fuerte)); height: 380px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(61,143,212,0.2); position: relative; overflow: hidden;">
+      <div style="text-align: center; position: relative; z-index: 1;">
+        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 100px; font-weight: 700; color: rgba(61,143,212,0.1); line-height: 1;">20+</div>
+        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--azul-claro); margin-top: -12px;">años de experiencia</div>
+      </div>
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--azul-vivo), var(--azul-claro));"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MISIÓN VISIÓN -->
+<section class="section section-alt">
+  <div class="fade-in" style="margin-bottom: 48px;">
+    <div class="section-tag">Lo que nos mueve</div>
+    <h2 class="section-title">Misión y <span>visión</span></h2>
+  </div>
+  <div class="mvv-grid">
+    <div class="mvv-card fade-in">
+      <span class="mvv-icono">🤝</span>
+      <div class="mvv-titulo">Misión</div>
+      <div class="mvv-linea"></div>
+      <div class="mvv-texto">Colaborar para servir mejor</div>
+      <p class="mvv-desc">
+        Colaboramos con nuestros clientes para brindarles el mejor empaque, 
+        cubriendo sus necesidades en tiempo y forma — con el compromiso de 
+        quienes entienden que tu éxito es también el nuestro.
+      </p>
+    </div>
+    <div class="mvv-card fade-in">
+      <span class="mvv-icono">🔭</span>
+      <div class="mvv-titulo">Visión</div>
+      <div class="mvv-linea"></div>
+      <div class="mvv-texto">Innovar para crecer juntos</div>
+      <p class="mvv-desc">
+        Desarrollar empaques de vanguardia gracias a la innovación constante en procesos, 
+        beneficiando tanto a nuestros colaboradores como a la comunidad de Cortazar 
+        y a cada cliente que deposita su confianza en nosotros.
+      </p>
+    </div>
+    <div class="mvv-card fade-in">
+      <span class="mvv-icono">⚡</span>
+      <div class="mvv-titulo">Diferenciador</div>
+      <div class="mvv-linea"></div>
+      <div class="mvv-texto">Respondemos en urgencias</div>
+      <p class="mvv-desc">
+        Sabemos que tu industria no para. Por eso nos hemos especializado en 
+        dar respuesta cuando más la necesitas — con agilidad, sin sacrificar 
+        la calidad que nos caracteriza desde hace más de 20 años.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- VALORES -->
+<section class="section">
+  <div class="fade-in">
+    <div class="section-tag">Lo que nos define</div>
+    <h2 class="section-title">Nuestros <span>valores</span></h2>
+  </div>
+  <div class="valores-grid">
+    <div class="valor-card fade-in">
+      <span class="valor-icono">🤝</span>
+      <div class="valor-nombre">Lealtad</div>
+      <p class="valor-desc">Estamos contigo en cada pedido, en cada urgencia, en cada proyecto. La relación con nuestros clientes va más allá de una transacción.</p>
+    </div>
+    <div class="valor-card fade-in">
+      <span class="valor-icono">🎯</span>
+      <div class="valor-nombre">Compromiso</div>
+      <p class="valor-desc">Cuando decimos que lo entregamos, lo entregamos. Nuestro compromiso con los tiempos y la calidad es innegociable.</p>
+    </div>
+    <div class="valor-card fade-in">
+      <span class="valor-icono">✅</span>
+      <div class="valor-nombre">Responsabilidad</div>
+      <p class="valor-desc">Respondemos por nuestro trabajo, por nuestra gente y por el impacto que generamos en nuestra comunidad.</p>
+    </div>
+    <div class="valor-card fade-in">
+      <span class="valor-icono">🌱</span>
+      <div class="valor-nombre">Compañerismo</div>
+      <p class="valor-desc">El equipo que hay detrás de cada empaque trabaja unido. El compañerismo es lo que nos permite cumplir cuando más se nos exige.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="section section-alt">
+  <div class="fade-in">
+    <div class="section-tag">Cómo fabricamos</div>
+    <h2 class="section-title">Nuestro <span>proceso</span></h2>
+  </div>
+  <div class="proceso-grid">
+    <div class="proceso-paso fade-in">
+      <div class="proceso-num">01</div>
+      <div class="proceso-nombre">Extrusión</div>
+      <p class="proceso-desc">Fundimos y formamos la resina plástica en película tubular o plana, controlando calibre, ancho y composición de cada capa según la fórmula del producto.</p>
+    </div>
+    <div class="proceso-paso fade-in">
+      <div class="proceso-num">02</div>
+      <div class="proceso-nombre">Impresión</div>
+      <p class="proceso-desc">Aplicamos diseños en hasta 6 colores mediante flexografía en nuestras máquinas de impresión, con pantones personalizados para cada cliente.</p>
+    </div>
+    <div class="proceso-paso fade-in">
+      <div class="proceso-num">03</div>
+      <div class="proceso-nombre">Corte y acabado</div>
+      <p class="proceso-desc">Cortamos, troquelamos y damos el acabado final a cada bolsa o rollo según las especificaciones del pedido — listo para entrega.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final">
+  <h2 class="cta-titulo">¿Listo para trabajar <span>juntos?</span></h2>
+  <p class="cta-desc">Cuéntanos lo que necesitas. Estamos aquí para ayudarte — con o sin urgencia.</p>
+  <a href="contacto.html" class="btn-primary">Contáctanos</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
+  <div class="footer-text">© 2025 Plásticos Cortazarenses · Todos los derechos reservados</div>
+  <div class="footer-dir">Cortazar, Guanajuato, México</div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

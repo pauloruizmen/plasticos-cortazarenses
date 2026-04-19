@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mercados | Plásticos Cortazarenses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .mercados-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .mercado-card {
+    background: var(--azul-medio);
+    border: 1px solid rgba(61,143,212,0.12);
+    padding: 52px 44px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .mercado-card:hover { border-color: rgba(61,143,212,0.4); transform: translateY(-3px); }
+  .mercado-icono { font-size: 40px; margin-bottom: 24px; display: block; }
+  .mercado-nombre {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px; font-weight: 700;
+    text-transform: uppercase; color: var(--blanco); margin-bottom: 16px;
+  }
+  .mercado-desc {
+    font-size: 15px; font-weight: 300;
+    line-height: 1.7; color: rgba(255,255,255,0.6);
+    margin-bottom: 28px;
+  }
+  .mercado-lista {
+    list-style: none; display: flex; flex-direction: column; gap: 8px;
+  }
+  .mercado-lista li {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--azul-claro);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .mercado-lista li::before { content: '→'; color: rgba(61,143,212,0.5); }
+  @media (max-width: 900px) { .mercados-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+      <rect x="1" y="1" width="36" height="36" rx="8" fill="rgba(29,106,184,0.15)" stroke="rgba(61,143,212,0.5)" stroke-width="1"/>
+      <circle cx="19" cy="19" r="13" stroke="#3d8fd4" stroke-width="1.5" fill="none"/>
+      <circle cx="19" cy="19" r="9" stroke="#1d6ab8" stroke-width="1" fill="none"/>
+      <text x="19" y="24" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="15" fill="#72b8e8">P</text>
+    </svg>
+    <div class="nav-logo-text">Plásticos Cortazarenses<span>Empaques Flexibles</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="mercados.html" class="activo">Mercados</a></li>
+    <li><a href="productos.html">Productos</a></li>
+    <li><a href="soluciones.html">Soluciones</a></li>
+    <li><a href="porque-nosotros.html">¿Por qué nosotros?</a></li>
+    <li><a href="clientes.html">Clientes</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <a href="contacto.html" class="nav-cta">Cotizar</a>
+</nav>
+<div class="page-header">
+  <a href="index.html" class="breadcrumb-link">Inicio</a>
+  <span class="breadcrumb-sep">›</span>
+  <span class="breadcrumb-current">Mercados</span>
+</div>
+<section class="section">
+  <div class="section-tag">A quién servimos</div>
+  <h1 class="section-title">Nuestros <span>mercados</span></h1>
+  <p class="section-body" style="max-width:600px;">Llevamos más de 20 años desarrollando empaques para industrias que exigen calidad, tiempos cumplidos y respuesta ante lo urgente.</p>
+  <div class="mercados-grid">
+    <div class="mercado-card fade-in">
+      <span class="mercado-icono">🥕</span>
+      <div class="mercado-nombre">Hortalizas y verduras</div>
+      <p class="mercado-desc">Nuestro mercado principal. Fabricamos bolsas tubulares, películas y rollos para el empaque de zanahoria, lechuga, apio, espinaca y más — con las especificaciones exactas que cada productor necesita.</p>
+      <ul class="mercado-lista">
+        <li>Bolsas tubulares naturales y de color</li>
+        <li>Con y sin impresión flexográfica</li>
+        <li>Distintos calibres y medidas</li>
+        <li>Con troquel, fuelle y solapa</li>
+      </ul>
+    </div>
+    <div class="mercado-card fade-in">
+      <span class="mercado-icono">🧊</span>
+      <div class="mercado-nombre">Hielo</div>
+      <p class="mercado-desc">Atendemos a más de 35 marcas de hielo en todo México. Bolsas resistentes, herméticas y con impresión de alta calidad para presentaciones de 1.5 hasta 15 kilogramos.</p>
+      <ul class="mercado-lista">
+        <li>Bolsas azules y naturales</li>
+        <li>Presentaciones de 1.5, 3, 5 y 15 kg</li>
+        <li>Con fuelle y solapa</li>
+        <li>Impresión personalizada por marca</li>
+      </ul>
+    </div>
+    <div class="mercado-card fade-in">
+      <span class="mercado-icono">🌱</span>
+      <div class="mercado-nombre">Invernadero</div>
+      <p class="mercado-desc">Rollos y películas blanco/negro con y sin UV para invernaderos. Fabricados para aguantar las condiciones del campo y proteger los cultivos durante toda la temporada.</p>
+      <ul class="mercado-lista">
+        <li>Rollos con inhibidor UV</li>
+        <li>Película blanco por fuera, negro por dentro</li>
+        <li>Bolsas de cultivo en distintos litros</li>
+        <li>Anchos y largos a especificación</li>
+      </ul>
+    </div>
+    <div class="mercado-card fade-in">
+      <span class="mercado-icono">🛏️</span>
+      <div class="mercado-nombre">Almohadas y textil</div>
+      <p class="mercado-desc">Bolsas de presentación para almohadas y ropa de cama. Trabajamos con marcas presentes en Walmart y Aurrera, cumpliendo sus especificaciones de medida, impresión y resistencia.</p>
+      <ul class="mercado-lista">
+        <li>Bolsas transparentes y con impresión</li>
+        <li>Medidas a especificación del cliente</li>
+        <li>Cumplimiento de estándares de retail</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="cta-final">
+  <h2 class="cta-titulo">¿Tu industria <span>no aparece aquí?</span></h2>
+  <p class="cta-desc">También atendemos sectores industriales, laboratorios, asfalto y más. Cuéntanos lo que necesitas.</p>
+  <a href="contacto.html" class="btn-primary">Contáctanos</a>
+</section>
+<footer>
+  <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
+  <div class="footer-text">© 2025 Plásticos Cortazarenses · Todos los derechos reservados</div>
+  <div class="footer-dir">Cortazar, Guanajuato, México</div>
+</footer>
+<script>
+  const obs = new IntersectionObserver((e) => { e.forEach(x => { if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}}); },{threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

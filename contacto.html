@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Por qué nosotros? | Plásticos Cortazarenses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .razones-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 2px; margin-top: 48px;
+  }
+  .razon-card {
+    background: var(--azul-medio);
+    border: 1px solid rgba(61,143,212,0.1);
+    padding: 52px 44px;
+    transition: border-color 0.2s;
+    display: grid; grid-template-columns: 60px 1fr; gap: 24px; align-items: start;
+  }
+  .razon-card:hover { border-color: rgba(61,143,212,0.35); }
+  .razon-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px; font-weight: 700;
+    color: rgba(61,143,212,0.15); line-height: 1;
+  }
+  .razon-nombre {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px; font-weight: 700; text-transform: uppercase;
+    color: var(--blanco); margin-bottom: 12px;
+  }
+  .razon-desc { font-size: 15px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.6); }
+  .razon-tag {
+    display: inline-block; margin-top: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--azul-claro);
+    border-top: 1px solid rgba(61,143,212,0.3); padding-top: 12px;
+  }
+  .diferencia-highlight {
+    margin-top: 72px; padding: 52px;
+    background: var(--azul-fuerte);
+    border: 1px solid rgba(61,143,212,0.25);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+  }
+  .highlight-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 96px; font-weight: 700; line-height: 1;
+    color: var(--azul-claro);
+  }
+  .highlight-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  @media (max-width: 900px) {
+    .razones-grid, .diferencia-highlight { grid-template-columns: 1fr; }
+    .razon-card { grid-template-columns: 1fr; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+      <rect x="1" y="1" width="36" height="36" rx="8" fill="rgba(29,106,184,0.15)" stroke="rgba(61,143,212,0.5)" stroke-width="1"/>
+      <circle cx="19" cy="19" r="13" stroke="#3d8fd4" stroke-width="1.5" fill="none"/>
+      <circle cx="19" cy="19" r="9" stroke="#1d6ab8" stroke-width="1" fill="none"/>
+      <text x="19" y="24" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="15" fill="#72b8e8">P</text>
+    </svg>
+    <div class="nav-logo-text">Plásticos Cortazarenses<span>Empaques Flexibles</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="mercados.html">Mercados</a></li>
+    <li><a href="productos.html">Productos</a></li>
+    <li><a href="soluciones.html">Soluciones</a></li>
+    <li><a href="porque-nosotros.html" class="activo">¿Por qué nosotros?</a></li>
+    <li><a href="clientes.html">Clientes</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <a href="contacto.html" class="nav-cta">Cotizar</a>
+</nav>
+<div class="page-header">
+  <a href="index.html" class="breadcrumb-link">Inicio</a>
+  <span class="breadcrumb-sep">›</span>
+  <span class="breadcrumb-current">¿Por qué nosotros?</span>
+</div>
+<section class="section">
+  <div class="section-tag">Nuestra diferencia</div>
+  <h1 class="section-title">Lo que nos <span>distingue</span></h1>
+  <p class="section-body" style="max-width:600px;">Hay muchos fabricantes de empaques. Estas son las razones por las que nuestros clientes llevan años eligiéndonos.</p>
+
+  <div class="razones-grid">
+    <div class="razon-card fade-in">
+      <div class="razon-num">01</div>
+      <div>
+        <div class="razon-nombre">Respondemos en urgencias</div>
+        <p class="razon-desc">Cuando tu producción no puede esperar, nosotros tampoco. Nos hemos especializado en dar respuesta rápida sin sacrificar la calidad. Es uno de nuestros mayores diferenciadores.</p>
+        <div class="razon-tag">⚡ Respuesta en tiempo récord</div>
+      </div>
+    </div>
+    <div class="razon-card fade-in">
+      <div class="razon-num">02</div>
+      <div>
+        <div class="razon-nombre">Más de 20 años de experiencia</div>
+        <p class="razon-desc">Dos décadas fabricando empaques para la industria agroalimentaria nos dan el conocimiento técnico para resolver cualquier especificación, por compleja que sea.</p>
+        <div class="razon-tag">📅 Desde el año 2000</div>
+      </div>
+    </div>
+    <div class="razon-card fade-in">
+      <div class="razon-num">03</div>
+      <div>
+        <div class="razon-nombre">Trabajamos junto a ti</div>
+        <p class="razon-desc">No somos proveedores — somos colaboradores. Entendemos tu operación, tus tiempos y tus estándares para entregarte exactamente lo que necesitas.</p>
+        <div class="razon-tag">🤝 Relación de confianza</div>
+      </div>
+    </div>
+    <div class="razon-card fade-in">
+      <div class="razon-num">04</div>
+      <div>
+        <div class="razon-nombre">Impresión propia</div>
+        <p class="razon-desc">Contamos con nuestras propias máquinas de impresión flexográfica. Eso significa menos intermediarios, más control de calidad y tiempos más cortos para ti.</p>
+        <div class="razon-tag">🖨️ Flexografía hasta 6 colores</div>
+      </div>
+    </div>
+    <div class="razon-card fade-in">
+      <div class="razon-num">05</div>
+      <div>
+        <div class="razon-nombre">200 productos activos</div>
+        <p class="razon-desc">Nuestro catálogo activo de 200 productos nos permite tener experiencia comprobada en distintos formatos, medidas y aplicaciones — sin empezar de cero cada vez.</p>
+        <div class="razon-tag">📦 Catálogo amplio y activo</div>
+      </div>
+    </div>
+    <div class="razon-card fade-in">
+      <div class="razon-num">06</div>
+      <div>
+        <div class="razon-nombre">Empresa 100% mexicana</div>
+        <p class="razon-desc">Somos de Cortazar, Guanajuato. Conocemos el mercado nacional, hablamos tu idioma y tenemos los mismos valores que tú: compromiso, responsabilidad y compañerismo.</p>
+        <div class="razon-tag">🇲🇽 Orgullo cortazarense</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="diferencia-highlight fade-in">
+    <div>
+      <div class="highlight-num">20+</div>
+      <div class="highlight-label">Años eligiéndonos</div>
+    </div>
+    <div>
+      <p class="section-body">Nuestros clientes no son transacciones. Son relaciones que llevan años — porque cuando cumplimos en una urgencia, cuando entregamos a tiempo, cuando la calidad no falla, se construye algo más fuerte que un contrato.</p>
+      <a href="contacto.html" class="btn-primary" style="margin-top:8px;">Empieza hoy</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
+  <div class="footer-text">© 2025 Plásticos Cortazarenses · Todos los derechos reservados</div>
+  <div class="footer-dir">Cortazar, Guanajuato, México</div>
+</footer>
+<script>
+  const obs = new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}});},{threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

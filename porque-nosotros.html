@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plásticos Cortazarenses | Empaques Flexibles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --azul-oscuro:  #0a1628;
+    --azul-medio:   #0f2a52;
+    --azul-fuerte:  #1a4480;
+    --azul-vivo:    #1d6ab8;
+    --azul-claro:   #3d8fd4;
+    --azul-cielo:   #72b8e8;
+    --blanco:       #ffffff;
+    --gris-claro:   #f0f4f8;
+    --gris-texto:   #8ea8c3;
+    --acento:       #e8f4fd;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 72px;
+    background: rgba(10, 22, 40, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(61, 143, 212, 0.15);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .nav-logo-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--blanco);
+    line-height: 1.1;
+  }
+  .nav-logo-text span { color: var(--azul-claro); font-weight: 300; font-size: 13px; display: block; letter-spacing: 0.12em; }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gris-texto);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--azul-claro); }
+
+  .nav-cta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blanco);
+    background: var(--azul-vivo);
+    border: none;
+    padding: 10px 24px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--azul-claro); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 60px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+      linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-medio) 60%, var(--azul-fuerte) 100%);
+  }
+
+  /* Líneas diagonales decorativas */
+  .hero-lines {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0.06;
+  }
+  .hero-lines::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 800px; height: 800px;
+    border: 1px solid var(--azul-claro);
+    transform: rotate(25deg);
+  }
+  .hero-lines::after {
+    content: '';
+    position: absolute;
+    top: 100px; right: 50px;
+    width: 600px; height: 600px;
+    border: 1px solid var(--azul-claro);
+    transform: rotate(25deg);
+  }
+
+  /* Círculo decorativo derecho */
+  .hero-circle {
+    position: absolute;
+    right: -80px; top: 50%;
+    transform: translateY(-50%);
+    width: 560px; height: 560px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(29, 106, 184, 0.25) 0%, transparent 70%);
+    border: 1px solid rgba(61, 143, 212, 0.2);
+  }
+  .hero-circle::before {
+    content: '';
+    position: absolute;
+    inset: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(61, 143, 212, 0.15);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    animation: fadeUp 0.9s ease both;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--azul-claro);
+    margin-bottom: 28px;
+  }
+  .hero-tag::before {
+    content: '';
+    display: block;
+    width: 28px; height: 1px;
+    background: var(--azul-claro);
+  }
+
+  .hero-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(48px, 7vw, 84px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .hero-title .line-azul { color: var(--azul-claro); }
+
+  .hero-desc {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+    max-width: 520px;
+    margin-bottom: 48px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .btn-primary {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blanco);
+    background: var(--azul-vivo);
+    border: none;
+    padding: 16px 36px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--azul-claro); transform: translateY(-1px); }
+
+  .btn-secondary {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--azul-claro);
+    background: transparent;
+    border: 1px solid rgba(61, 143, 212, 0.4);
+    padding: 16px 36px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--azul-claro); color: var(--blanco); }
+
+  /* Stats bar */
+  .hero-stats {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    display: flex;
+    border-top: 1px solid rgba(61, 143, 212, 0.15);
+    background: rgba(10, 22, 40, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 2;
+  }
+  .stat {
+    flex: 1;
+    padding: 28px 40px;
+    border-right: 1px solid rgba(61, 143, 212, 0.15);
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--azul-claro);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-label {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: var(--gris-texto);
+    text-transform: uppercase;
+  }
+
+  /* ── SECCIÓN NOSOTROS ── */
+  .section-nosotros {
+    padding: 120px 60px;
+    background: var(--azul-oscuro);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--azul-claro);
+    margin-bottom: 20px;
+  }
+  .section-tag::before {
+    content: '';
+    display: block;
+    width: 28px; height: 1px;
+    background: var(--azul-claro);
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .section-title span { color: var(--azul-claro); }
+
+  .section-body {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 40px;
+  }
+
+  .nosotros-visual {
+    position: relative;
+    height: 420px;
+    background: linear-gradient(135deg, var(--azul-medio) 0%, var(--azul-fuerte) 100%);
+    border: 1px solid rgba(61, 143, 212, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nosotros-visual-inner {
+    text-align: center;
+  }
+  .nosotros-visual-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(61, 143, 212, 0.12);
+    line-height: 1;
+    user-select: none;
+  }
+  .nosotros-visual-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--azul-claro);
+    margin-top: -20px;
+  }
+  .nosotros-visual-bar {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--azul-vivo), var(--azul-claro));
+  }
+
+  /* ── MERCADOS ── */
+  .section-mercados {
+    padding: 100px 60px;
+    background: var(--azul-medio);
+  }
+
+  .section-header {
+    margin-bottom: 56px;
+  }
+
+  .mercados-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .mercado-card {
+    background: var(--azul-fuerte);
+    padding: 48px 32px;
+    border: 1px solid rgba(61, 143, 212, 0.1);
+    transition: background 0.25s, border-color 0.25s, transform 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+  }
+  .mercado-card:hover {
+    background: var(--azul-vivo);
+    border-color: rgba(61, 143, 212, 0.4);
+    transform: translateY(-4px);
+  }
+
+  .mercado-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .mercado-nombre {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--blanco);
+    margin-bottom: 10px;
+  }
+
+  .mercado-desc {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* ── PRODUCTOS ── */
+  .section-productos {
+    padding: 100px 60px;
+    background: var(--azul-oscuro);
+  }
+
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+  }
+
+  .producto-card {
+    background: var(--azul-medio);
+    border: 1px solid rgba(61, 143, 212, 0.12);
+    padding: 40px 32px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .producto-card:hover {
+    border-color: rgba(61, 143, 212, 0.5);
+    transform: translateY(-3px);
+  }
+
+  .producto-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: rgba(61, 143, 212, 0.5);
+    margin-bottom: 20px;
+  }
+
+  .producto-nombre {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--blanco);
+    margin-bottom: 14px;
+    line-height: 1.1;
+  }
+
+  .producto-desc {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .producto-linea {
+    width: 40px; height: 2px;
+    background: var(--azul-claro);
+    margin-top: 24px;
+  }
+
+  /* ── CONTACTO ── */
+  .section-contacto {
+    padding: 100px 60px;
+    background: var(--azul-medio);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contacto-dato {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 28px;
+    align-items: flex-start;
+  }
+
+  .contacto-icono {
+    width: 40px; height: 40px;
+    background: rgba(29, 106, 184, 0.2);
+    border: 1px solid rgba(61, 143, 212, 0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .contacto-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--azul-claro);
+    margin-bottom: 4px;
+  }
+
+  .contacto-valor {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.5;
+  }
+
+  .contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-input {
+    background: rgba(10, 22, 40, 0.6);
+    border: 1px solid rgba(61, 143, 212, 0.2);
+    color: var(--blanco);
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 14px 18px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-input::placeholder { color: rgba(255,255,255,0.3); }
+  .form-input:focus { border-color: var(--azul-claro); }
+
+  textarea.form-input {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #060f1c;
+    padding: 40px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(61, 143, 212, 0.1);
+  }
+
+  .footer-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .footer-logo span { color: var(--azul-claro); }
+
+  .footer-text {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+  }
+
+  .footer-dir {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.3);
+    text-align: right;
+  }
+
+  /* ── ANIMACIONES ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 80px 24px 120px; }
+    .hero-stats { position: static; flex-direction: column; }
+    .stat { border-right: none; border-bottom: 1px solid rgba(61,143,212,0.15); }
+    .section-nosotros, .section-contacto { grid-template-columns: 1fr; padding: 60px 24px; }
+    .mercados-grid { grid-template-columns: 1fr 1fr; }
+    .productos-grid { grid-template-columns: 1fr; }
+    .section-mercados, .section-productos { padding: 60px 24px; }
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1" y="1" width="36" height="36" rx="8" fill="rgba(29,106,184,0.15)" stroke="rgba(61,143,212,0.5)" stroke-width="1"/>
+      <circle cx="19" cy="19" r="13" stroke="#3d8fd4" stroke-width="1.5" fill="none"/>
+      <circle cx="19" cy="19" r="9" stroke="#1d6ab8" stroke-width="1" fill="none"/>
+      <text x="19" y="24" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="15" fill="#72b8e8" letter-spacing="0">P</text>
+    </svg>
+    <div class="nav-logo-text">
+      Plásticos Cortazarenses
+      <span>Empaques Flexibles</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="mercados.html">Mercados</a></li>
+    <li><a href="productos.html">Productos</a></li>
+    <li><a href="soluciones.html">Soluciones</a></li>
+    <li><a href="porque-nosotros.html">¿Por qué nosotros?</a></li>
+    <li><a href="clientes.html">Clientes</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <a href="contacto.html" class="nav-cta">Cotizar</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-circle"></div>
+
+  <div class="hero-content">
+    <div class="hero-tag">Empaques flexibles · Más de 20 años de experiencia</div>
+    <h1 class="hero-title">
+      Tu empaque<br>
+      <span class="line-azul">listo</span> cuando<br>
+      lo necesitas
+    </h1>
+    <p class="hero-desc">
+      Fabricamos empaques flexibles para la industria agroalimentaria y más.
+      Especialistas en hortalizas, verduras, hielo y almohadas —
+      con la capacidad de responder en tiempos de urgencia.
+    </p>
+    <div class="hero-actions">
+      <a href="#productos" class="btn-primary">Ver productos</a>
+      <a href="#contacto" class="btn-secondary">Contacto</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">20+</div>
+      <div class="stat-label">Años de experiencia</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">200</div>
+      <div class="stat-label">Productos activos</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Industrias atendidas</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">24h</div>
+      <div class="stat-label">Respuesta de urgencia</div>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="section-nosotros" id="nosotros">
+  <div class="fade-in">
+    <div class="section-tag">Quiénes somos</div>
+    <h2 class="section-title">Más de 20 años <span>colaborando</span> contigo</h2>
+    <p class="section-body">
+      Somos Plásticos Cortazarenses, una empresa 100% mexicana con sede en Cortazar, Guanajuato.
+      Trabajamos junto a nuestros clientes para brindarles el mejor empaque — 
+      cubriendo sus necesidades en tiempo y forma, con lealtad y compromiso desde el primer día.
+    </p>
+    <p class="section-body">
+      Nuestra razón de ser es la innovación constante en procesos, siempre 
+      pensando en el bienestar de nuestros colaboradores y de la comunidad que nos rodea.
+      Cuando tu operación necesita respuesta urgente, estamos ahí.
+    </p>
+    <a href="nosotros.html" class="btn-primary">Conoce nuestra historia</a>
+  </div>
+  <div class="nosotros-visual fade-in">
+    <div class="nosotros-visual-inner">
+      <div class="nosotros-visual-num">PC</div>
+      <div class="nosotros-visual-text">Cortazar, Guanajuato</div>
+    </div>
+    <div class="nosotros-visual-bar"></div>
+  </div>
+</section>
+
+<!-- MERCADOS -->
+<section class="section-mercados" id="mercados">
+  <div class="section-header fade-in">
+    <div class="section-tag">A quién servimos</div>
+    <h2 class="section-title">Nuestros <span>mercados</span></h2>
+  </div>
+  <div class="mercados-grid">
+    <a class="mercado-card fade-in" href="#contacto">
+      <span class="mercado-icon">🌿</span>
+      <div class="mercado-nombre">Hortalizas y verduras</div>
+      <div class="mercado-desc">Bolsas tubulares y películas diseñadas para el empaque de productos frescos del campo.</div>
+    </a>
+    <a class="mercado-card fade-in" href="#contacto">
+      <span class="mercado-icon">🧊</span>
+      <div class="mercado-nombre">Hielo</div>
+      <div class="mercado-desc">Empaques resistentes y herméticos para bolsas de hielo en diferentes presentaciones.</div>
+    </a>
+    <a class="mercado-card fade-in" href="#contacto">
+      <span class="mercado-icon">🛏️</span>
+      <div class="mercado-nombre">Almohadas y textil</div>
+      <div class="mercado-desc">Bolsas de presentación y protección para productos de cama, almohadas y ropa de hogar.</div>
+    </a>
+    <a class="mercado-card fade-in" href="#contacto">
+      <span class="mercado-icon">🏭</span>
+      <div class="mercado-nombre">Industrial</div>
+      <div class="mercado-desc">Soluciones de empaque a medida para distintos usos industriales y agrícolas.</div>
+    </a>
+  </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section class="section-productos" id="productos">
+  <div class="section-header fade-in">
+    <div class="section-tag">Lo que fabricamos</div>
+    <h2 class="section-title">Nuestros <span>productos</span></h2>
+  </div>
+  <div class="productos-grid">
+    <div class="producto-card fade-in">
+      <div class="producto-num">01</div>
+      <div class="producto-nombre">Bolsas tubulares</div>
+      <div class="producto-desc">Fabricadas por extrusión en monocapa y coextrusión bicapa, con y sin tratamiento corona para impresión.</div>
+      <div class="producto-linea"></div>
+    </div>
+    <div class="producto-card fade-in">
+      <div class="producto-num">02</div>
+      <div class="producto-nombre">Película plástica</div>
+      <div class="producto-desc">Película en rollo para empaque de hortalizas, verduras, semillas y aplicaciones especiales.</div>
+      <div class="producto-linea"></div>
+    </div>
+    <div class="producto-card fade-in">
+      <div class="producto-num">03</div>
+      <div class="producto-nombre">Bolsas impresas</div>
+      <div class="producto-desc">Impresión flexográfica hasta 6 colores con pantones personalizados. Tu marca en cada empaque.</div>
+      <div class="producto-linea"></div>
+    </div>
+    <div class="producto-card fade-in">
+      <div class="producto-num">04</div>
+      <div class="producto-nombre">Bolsas con troquel</div>
+      <div class="producto-desc">Corte y troquelado para bolsas de presentación con acabados específicos para cada cliente.</div>
+      <div class="producto-linea"></div>
+    </div>
+    <div class="producto-card fade-in">
+      <div class="producto-num">05</div>
+      <div class="producto-nombre">Empaque para hielo</div>
+      <div class="producto-desc">Bolsas resistentes y sellables diseñadas específicamente para el manejo y distribución de hielo.</div>
+      <div class="producto-linea"></div>
+    </div>
+    <div class="producto-card fade-in" style="border-color: rgba(61,143,212,0.4); background: linear-gradient(135deg, var(--azul-medio), rgba(29,106,184,0.3));">
+      <div class="producto-num" style="color: var(--azul-claro);">⚡ Urgencias</div>
+      <div class="producto-nombre">Entregas express</div>
+      <div class="producto-desc">Nos especializamos en responder cuando el tiempo apremia. Contáctanos y evaluamos tu requerimiento urgente.</div>
+      <div class="producto-linea" style="background: var(--azul-claro); width: 60px;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section-contacto" id="contacto">
+  <div class="fade-in">
+    <div class="section-tag">Estamos para servirte</div>
+    <h2 class="section-title">Hablemos de tu <span>proyecto</span></h2>
+    <p class="section-body">
+      Contáctanos para cotizar, resolver dudas técnicas o iniciar el desarrollo 
+      de un empaque a la medida de tu operación.
+    </p>
+
+    <div class="contacto-dato">
+      <div class="contacto-icono">📍</div>
+      <div>
+        <div class="contacto-label">Dirección</div>
+        <div class="contacto-valor">Cortazar, Guanajuato, México</div>
+      </div>
+    </div>
+    <div class="contacto-dato">
+      <div class="contacto-icono">📧</div>
+      <div>
+        <div class="contacto-label">Correo</div>
+        <div class="contacto-valor">ventas@plasticoscortazarenses.com</div>
+      </div>
+    </div>
+    <div class="contacto-dato">
+      <div class="contacto-icono">📞</div>
+      <div>
+        <div class="contacto-label">Teléfono</div>
+        <div class="contacto-valor">+52 (411) 000-0000</div>
+      </div>
+    </div>
+  </div>
+
+  <form class="contacto-form fade-in" onsubmit="return false;">
+    <div class="form-row">
+      <input class="form-input" type="text" placeholder="Nombre">
+      <input class="form-input" type="text" placeholder="Empresa">
+    </div>
+    <input class="form-input" type="email" placeholder="Correo electrónico">
+    <input class="form-input" type="tel" placeholder="Teléfono">
+    <textarea class="form-input" placeholder="¿En qué podemos ayudarte?"></textarea>
+    <button type="submit" class="btn-primary" style="align-self:flex-start">Enviar mensaje</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
+  <div class="footer-text">© 2025 Plásticos Cortazarenses · Todos los derechos reservados</div>
+  <div class="footer-dir">Cortazar, Guanajuato, México</div>
+</footer>
+
+<script>
+  // Scroll fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

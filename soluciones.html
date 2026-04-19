@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos | Plásticos Cortazarenses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ── FILTROS DE SEGMENTO ── */
+  .filtros {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .filtro-btn {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gris-texto);
+    background: transparent;
+    border: 1px solid rgba(61,143,212,0.2);
+    padding: 8px 20px; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .filtro-btn:hover, .filtro-btn.activo {
+    background: var(--azul-vivo);
+    border-color: var(--azul-vivo);
+    color: var(--blanco);
+  }
+
+  /* ── SEGMENTO ── */
+  .segmento { margin-bottom: 72px; }
+  .segmento-header {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(61,143,212,0.15);
+  }
+  .segmento-icono { font-size: 28px; }
+  .segmento-nombre {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px; font-weight: 700;
+    text-transform: uppercase; color: var(--blanco);
+  }
+  .segmento-count {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--azul-claro);
+    background: rgba(29,106,184,0.15);
+    border: 1px solid rgba(61,143,212,0.2);
+    padding: 4px 12px;
+    margin-left: auto;
+  }
+
+  /* ── IMAGEN DE SEGMENTO ── */
+  .segmento-visual {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  .segmento-img {
+    background: linear-gradient(135deg, var(--azul-medio), var(--azul-fuerte));
+    border: 1px solid rgba(61,143,212,0.2);
+    height: 200px;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 12px;
+    position: relative; overflow: hidden;
+  }
+  .segmento-img-icono { font-size: 48px; }
+  .segmento-img-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--azul-claro);
+  }
+  .segmento-img-bar {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--azul-vivo), var(--azul-claro));
+  }
+
+  /* ── PRODUCTOS GRID ── */
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .producto-item {
+    background: var(--azul-medio);
+    border: 1px solid rgba(61,143,212,0.08);
+    padding: 20px 24px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .producto-item:hover {
+    border-color: rgba(61,143,212,0.35);
+    background: rgba(29,106,184,0.15);
+  }
+  .producto-codigo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(61,143,212,0.5); margin-bottom: 6px;
+  }
+  .producto-nombre {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px; font-weight: 600;
+    text-transform: uppercase; color: var(--blanco);
+    line-height: 1.2;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .segmento-visual { grid-template-columns: 1fr; }
+    .productos-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .productos-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+      <rect x="1" y="1" width="36" height="36" rx="8" fill="rgba(29,106,184,0.15)" stroke="rgba(61,143,212,0.5)" stroke-width="1"/>
+      <circle cx="19" cy="19" r="13" stroke="#3d8fd4" stroke-width="1.5" fill="none"/>
+      <circle cx="19" cy="19" r="9" stroke="#1d6ab8" stroke-width="1" fill="none"/>
+      <text x="19" y="24" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="15" fill="#72b8e8">P</text>
+    </svg>
+    <div class="nav-logo-text">Plásticos Cortazarenses<span>Empaques Flexibles</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="mercados.html">Mercados</a></li>
+    <li><a href="productos.html" class="activo">Productos</a></li>
+    <li><a href="soluciones.html">Soluciones</a></li>
+    <li><a href="porque-nosotros.html">¿Por qué nosotros?</a></li>
+    <li><a href="clientes.html">Clientes</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <a href="contacto.html" class="nav-cta">Cotizar</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="page-header">
+  <a href="index.html" class="breadcrumb-link">Inicio</a>
+  <span class="breadcrumb-sep">›</span>
+  <span class="breadcrumb-current">Productos</span>
+</div>
+
+<!-- CONTENIDO -->
+<section class="section">
+  <div class="section-tag">Catálogo</div>
+  <h1 class="section-title" style="margin-bottom:8px;">Nuestros <span>productos</span></h1>
+  <p class="section-body" style="max-width:600px; margin-bottom:40px;">
+    200 productos activos organizados por segmento. Aquí encuentras el empaque que necesitas — 
+    y si no lo ves, lo desarrollamos contigo.
+  </p>
+
+  <!-- Filtros -->
+  <div class="filtros">
+    <button class="filtro-btn activo" onclick="filtrar('todos', this)">Todos</button>
+    <button class="filtro-btn" onclick="filtrar('hortalizas', this)">Hortalizas</button>
+    <button class="filtro-btn" onclick="filtrar('hielo', this)">Hielo</button>
+    <button class="filtro-btn" onclick="filtrar('invernadero', this)">Invernadero</button>
+    <button class="filtro-btn" onclick="filtrar('almohadas', this)">Almohadas</button>
+    <button class="filtro-btn" onclick="filtrar('industrial', this)">Industrial</button>
+    <button class="filtro-btn" onclick="filtrar('stock', this)">Stock</button>
+  </div>
+
+  <!-- HORTALIZAS -->
+  <div class="segmento fade-in" data-seg="hortalizas">
+    <div class="segmento-header">
+      <span class="segmento-icono">🥕</span>
+      <span class="segmento-nombre">Hortalizas y verduras</span>
+      <span class="segmento-count">Zanahoria · Lechuga · Apio · Espinaca</span>
+    </div>
+    <div class="segmento-visual">
+      <div class="segmento-img">
+        <span class="segmento-img-icono">🥕</span>
+        <span class="segmento-img-label">Empaque para campo</span>
+        <div class="segmento-img-bar"></div>
+      </div>
+      <div class="productos-grid">
+        <div class="producto-item"><div class="producto-codigo">AGGO001–008</div><div class="producto-nombre">Bolsas Fresh Carrots — Agrícola Gova</div></div>
+        <div class="producto-item"><div class="producto-codigo">AGRI001–011</div><div class="producto-nombre">Bolsas y rollos — Agrícola Nieto</div></div>
+        <div class="producto-item"><div class="producto-codigo">VERA001–003</div><div class="producto-nombre">Bolsas para lechuga y apio — Agrivera</div></div>
+        <div class="producto-item"><div class="producto-codigo">AGZA001–006</div><div class="producto-nombre">Bolsas Agrizana natural e impresa</div></div>
+        <div class="producto-item"><div class="producto-codigo">CMEX001–015</div><div class="producto-nombre">Bolsas zanahoria — Canmex</div></div>
+        <div class="producto-item"><div class="producto-codigo">CANO001–004</div><div class="producto-nombre">Bolsas y rollos — Cano Fresh</div></div>
+        <div class="producto-item"><div class="producto-codigo">DIAM001–006</div><div class="producto-nombre">Bolsas El Diamante naranja y natural</div></div>
+        <div class="producto-item"><div class="producto-codigo">ESPE001–049</div><div class="producto-nombre">Bolsas vegetales — La Esperanza de Miranda</div></div>
+        <div class="producto-item"><div class="producto-codigo">MART001–006</div><div class="producto-nombre">Bolsas — Martinez Produce</div></div>
+        <div class="producto-item"><div class="producto-codigo">ZGES001–009</div><div class="producto-nombre">Bolsas zanahoria — Zana Guess</div></div>
+        <div class="producto-item"><div class="producto-codigo">ERIK001–004</div><div class="producto-nombre">Bolsas — Zanahorias Erick's</div></div>
+        <div class="producto-item"><div class="producto-codigo">SACA001–008</div><div class="producto-nombre">Bolsas Sacami natural e impresa</div></div>
+        <div class="producto-item"><div class="producto-codigo">5EST001–014</div><div class="producto-nombre">Bolsas Green Field — Las 5 Estaciones</div></div>
+        <div class="producto-item"><div class="producto-codigo">DEMO001–004</div><div class="producto-nombre">Bolsas Demos Farm 1–5 lb</div></div>
+        <div class="producto-item"><div class="producto-codigo">BABI001–003</div><div class="producto-nombre">Bolsas Babia 2, 3 y 5 lb</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HIELO -->
+  <div class="segmento fade-in" data-seg="hielo">
+    <div class="segmento-header">
+      <span class="segmento-icono">🧊</span>
+      <span class="segmento-nombre">Hielo</span>
+      <span class="segmento-count">+35 marcas atendidas</span>
+    </div>
+    <div class="segmento-visual">
+      <div class="segmento-img">
+        <span class="segmento-img-icono">🧊</span>
+        <span class="segmento-img-label">Bolsas para hielo</span>
+        <div class="segmento-img-bar"></div>
+      </div>
+      <div class="productos-grid">
+        <div class="producto-item"><div class="producto-codigo">HANT001</div><div class="producto-nombre">Hielo Antártida 5 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">ARTK001–002</div><div class="producto-nombre">Hielo Artika 3 y 5 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">HDUR001–004</div><div class="producto-nombre">Hielo Durán 1.5, 3, 5 y 15 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">CUBI001</div><div class="producto-nombre">Hielo Don Cubito 5 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">BOSQ001–002</div><div class="producto-nombre">Hielo El Bosque 2.5 y 5 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">HEME001–003</div><div class="producto-nombre">Hielo EME 1.5, 3 y 5 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">HISI001–003</div><div class="producto-nombre">Hielo Hisiego 1.5, 3 y 5 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">MICH001–002</div><div class="producto-nombre">Hielo La Michoacana 5 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">LPUR001–004</div><div class="producto-nombre">Hielo La Purísima 1.5 a 10 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">LPRO001–003</div><div class="producto-nombre">Hielo La Providencia 1.5, 3 y 5 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">MEZZ001–004</div><div class="producto-nombre">Hielo Mezz 1.5, 3 y 5 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">POPO001–004</div><div class="producto-nombre">Hielo Popo 5 y 15 kg (Toluca y CDMX)</div></div>
+        <div class="producto-item"><div class="producto-codigo">RODR001–002</div><div class="producto-nombre">Hielo Rodríguez 5 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">HVIC001–002</div><div class="producto-nombre">Hielo Vicky 3 y 5 kg</div></div>
+        <div class="producto-item"><div class="producto-codigo">+15 marcas</div><div class="producto-nombre">Titanic, Titi, Real, Rubi, Barry, Azteca y más</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INVERNADERO -->
+  <div class="segmento fade-in" data-seg="invernadero">
+    <div class="segmento-header">
+      <span class="segmento-icono">🌱</span>
+      <span class="segmento-nombre">Invernadero y agricultura</span>
+      <span class="segmento-count">Rollos · Películas · Bolsas de cultivo</span>
+    </div>
+    <div class="segmento-visual">
+      <div class="segmento-img">
+        <span class="segmento-img-icono">🌱</span>
+        <span class="segmento-img-label">Plástico para invernadero</span>
+        <div class="segmento-img-bar"></div>
+      </div>
+      <div class="productos-grid">
+        <div class="producto-item"><div class="producto-codigo">SUHM001–017</div><div class="producto-nombre">Bolsas para invernadero blanco/negro — Suhm</div></div>
+        <div class="producto-item"><div class="producto-codigo">PTRE001–014</div><div class="producto-nombre">Rollos blancos con UV — P-Tre</div></div>
+        <div class="producto-item"><div class="producto-codigo">AGUI001–039</div><div class="producto-nombre">Rollos y películas blanco/negro — Los Aguilares</div></div>
+        <div class="producto-item"><div class="producto-codigo">GANF001–005</div><div class="producto-nombre">Bolsas y rollos blanco/negro — Ganfer</div></div>
+        <div class="producto-item"><div class="producto-codigo">ICOR001–002</div><div class="producto-nombre">Bolsas y rollos — Invernaderos Cortazar</div></div>
+        <div class="producto-item"><div class="producto-codigo">ACAR001</div><div class="producto-nombre">Boli Super Titan blanco/negro — Agrocarsal</div></div>
+        <div class="producto-item"><div class="producto-codigo">SANTI001–002</div><div class="producto-nombre">Bolsas para invernadero — Agro Industrias Santi</div></div>
+        <div class="producto-item"><div class="producto-codigo">CHAD001–005</div><div class="producto-nombre">Bolsas pigmentadas blanco/negro — Chada Agrícola</div></div>
+        <div class="producto-item"><div class="producto-codigo">HMIX001–005</div><div class="producto-nombre">Bolsas blanco/negro — Hortimix</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALMOHADAS -->
+  <div class="segmento fade-in" data-seg="almohadas">
+    <div class="segmento-header">
+      <span class="segmento-icono">🛏️</span>
+      <span class="segmento-nombre">Almohadas y textil</span>
+      <span class="segmento-count">Bolsas de presentación</span>
+    </div>
+    <div class="segmento-visual">
+      <div class="segmento-img">
+        <span class="segmento-img-icono">🛏️</span>
+        <span class="segmento-img-label">Empaque para almohadas</span>
+        <div class="segmento-img-bar"></div>
+      </div>
+      <div class="productos-grid">
+        <div class="producto-item"><div class="producto-codigo">BPIL001</div><div class="producto-nombre">Bolsa Home Line básica amarilla — Blancos Pileso</div></div>
+        <div class="producto-item"><div class="producto-codigo">BPIL002</div><div class="producto-nombre">Bolsa Maistay básica Aurrera</div></div>
+        <div class="producto-item"><div class="producto-codigo">BPIL003</div><div class="producto-nombre">Bolsa natural sin impresión</div></div>
+        <div class="producto-item"><div class="producto-codigo">BPIL004</div><div class="producto-nombre">Bolsa Maistay ortopédica</div></div>
+        <div class="producto-item"><div class="producto-codigo">BPIL005</div><div class="producto-nombre">Bolsa Mainstay 50/50 Walmart</div></div>
+        <div class="producto-item"><div class="producto-codigo">BPIL006–007</div><div class="producto-nombre">Bolsa Mainstays acolchada y clásica</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDUSTRIAL -->
+  <div class="segmento fade-in" data-seg="industrial">
+    <div class="segmento-header">
+      <span class="segmento-icono">🏭</span>
+      <span class="segmento-nombre">Industrial y especial</span>
+      <span class="segmento-count">Asfalto · Laboratorio · Sal · Pozole</span>
+    </div>
+    <div class="segmento-visual">
+      <div class="segmento-img">
+        <span class="segmento-img-icono">🏭</span>
+        <span class="segmento-img-label">Empaque industrial</span>
+        <div class="segmento-img-bar"></div>
+      </div>
+      <div class="productos-grid">
+        <div class="producto-item"><div class="producto-codigo">ASFA001</div><div class="producto-nombre">Bolsa para asfalto Franco 45×60 C-550</div></div>
+        <div class="producto-item"><div class="producto-codigo">AMIX001</div><div class="producto-nombre">Bolsa para asfalto Cool Mix 45×60 C-600</div></div>
+        <div class="producto-item"><div class="producto-codigo">ZELLA001</div><div class="producto-nombre">Bolsa para asfalto Zella 50×60 C-600</div></div>
+        <div class="producto-item"><div class="producto-codigo">LABC001–002</div><div class="producto-nombre">Bolsas Laboratorios Cifer (Forsolid / Sulfato)</div></div>
+        <div class="producto-item"><div class="producto-codigo">SALM001–007</div><div class="producto-nombre">Bolsas Salminque (borrego, ganado, vitaminado)</div></div>
+        <div class="producto-item"><div class="producto-codigo">SALN001</div><div class="producto-nombre">Bolsa grande Sal-Nutri</div></div>
+        <div class="producto-item"><div class="producto-codigo">PCAC001–003</div><div class="producto-nombre">Bolsas pozole — Cacahuazintle y La Paloma</div></div>
+        <div class="producto-item"><div class="producto-codigo">NACO001</div><div class="producto-nombre">Bolsa impresa Nacobre 20×60 C-500</div></div>
+        <div class="producto-item"><div class="producto-codigo">LEYT001–004</div><div class="producto-nombre">Bolsas negras y blanco/negro — Leyton</div></div>
+        <div class="producto-item"><div class="producto-codigo">CEXT001</div><div class="producto-nombre">Bolsa depósito Corona Extra Six — suaje boutique</div></div>
+        <div class="producto-item"><div class="producto-codigo">MAXC001</div><div class="producto-nombre">Bolsa Maxcarbon 35×60 C-550</div></div>
+        <div class="producto-item"><div class="producto-codigo">HENK001–007</div><div class="producto-nombre">Bolsas naturales — Henkel</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STOCK -->
+  <div class="segmento fade-in" data-seg="stock">
+    <div class="segmento-header">
+      <span class="segmento-icono">📦</span>
+      <span class="segmento-nombre">Productos en stock</span>
+      <span class="segmento-count">Disponibilidad inmediata</span>
+    </div>
+    <div class="segmento-visual">
+      <div class="segmento-img">
+        <span class="segmento-img-icono">📦</span>
+        <span class="segmento-img-label">Entrega inmediata</span>
+        <div class="segmento-img-bar"></div>
+      </div>
+      <div class="productos-grid">
+        <div class="producto-item"><div class="producto-codigo">STOC001</div><div class="producto-nombre">Bolsa 28×95 Fresh Carrots naranja</div></div>
+        <div class="producto-item"><div class="producto-codigo">STOC002–003</div><div class="producto-nombre">Bolsa 27×92 naranja — con y sin impresión</div></div>
+        <div class="producto-item"><div class="producto-codigo">STOC004</div><div class="producto-nombre">Bolsa 29×95 natural Fresh Carrots</div></div>
+        <div class="producto-item"><div class="producto-codigo">STOC005</div><div class="producto-nombre">Bolsa 30×95 natural tratada</div></div>
+        <div class="producto-item"><div class="producto-codigo">STOC006</div><div class="producto-nombre">Bolsa 25×75 naranja Fresh Carrots</div></div>
+        <div class="producto-item"><div class="producto-codigo">STOC009–025</div><div class="producto-nombre">Variantes natural y naranja — múltiples medidas</div></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta-final">
+  <h2 class="cta-titulo">¿No encontraste <span>lo que buscas?</span></h2>
+  <p class="cta-desc">Lo desarrollamos a la medida de tu operación. Contáctanos y lo resolvemos.</p>
+  <a href="contacto.html" class="btn-primary">Solicitar cotización</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
+  <div class="footer-text">© 2025 Plásticos Cortazarenses · Todos los derechos reservados</div>
+  <div class="footer-dir">Cortazar, Guanajuato, México</div>
+</footer>
+
+<script>
+  // Scroll fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Filtros
+  function filtrar(seg, btn) {
+    document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('activo'));
+    btn.classList.add('activo');
+    document.querySelectorAll('.segmento').forEach(s => {
+      s.style.display = (seg === 'todos' || s.dataset.seg === seg) ? 'block' : 'none';
+    });
+  }
+</script>
+</body>
+</html>
