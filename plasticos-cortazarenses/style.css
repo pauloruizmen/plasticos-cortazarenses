@@ -1,0 +1,195 @@
+/* ============================================================
+   PLÁSTICOS CORTAZARENSES — Estilos globales
+   Aplica a todas las páginas del sitio
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --azul-oscuro:  #0a1628;
+  --azul-medio:   #0f2a52;
+  --azul-fuerte:  #1a4480;
+  --azul-vivo:    #1d6ab8;
+  --azul-claro:   #3d8fd4;
+  --azul-cielo:   #72b8e8;
+  --blanco:       #ffffff;
+  --gris-claro:   #f0f4f8;
+  --gris-texto:   #8ea8c3;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--azul-oscuro);
+  color: var(--blanco);
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  height: 72px;
+  background: rgba(10, 22, 40, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(61, 143, 212, 0.15);
+}
+
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.nav-logo-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 18px;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--blanco); line-height: 1.1;
+}
+.nav-logo-text span {
+  color: var(--azul-claro); font-weight: 300;
+  font-size: 13px; display: block; letter-spacing: 0.12em;
+}
+
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 400;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--gris-texto); text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links a.activo { color: var(--azul-claro); }
+
+.nav-cta {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--blanco); background: var(--azul-vivo);
+  border: none; padding: 10px 24px;
+  cursor: pointer; text-decoration: none; transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--azul-claro); }
+
+/* ── BREADCRUMB ── */
+.page-header {
+  padding: 90px 60px 28px;
+  background: var(--azul-oscuro);
+  border-bottom: 1px solid rgba(61, 143, 212, 0.12);
+  display: flex; align-items: center; gap: 10px;
+}
+.breadcrumb-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 400;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gris-texto); text-decoration: none; transition: color 0.2s;
+}
+.breadcrumb-link:hover { color: var(--azul-claro); }
+.breadcrumb-sep { color: rgba(61,143,212,0.4); font-size: 12px; }
+.breadcrumb-current {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--azul-claro);
+}
+
+/* ── SECCIONES ── */
+.section { padding: 80px 60px; }
+.section-alt { background: var(--azul-medio); }
+
+.section-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--azul-claro); margin-bottom: 16px;
+}
+.section-tag::before { content: ''; display: block; width: 28px; height: 1px; background: var(--azul-claro); }
+
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(32px, 3.5vw, 52px);
+  font-weight: 700; line-height: 1;
+  text-transform: uppercase; margin-bottom: 24px;
+}
+.section-title span { color: var(--azul-claro); }
+
+.section-body {
+  font-size: 16px; font-weight: 300;
+  line-height: 1.8; color: rgba(255,255,255,0.65);
+  margin-bottom: 20px;
+}
+
+/* ── BOTONES ── */
+.btn-primary {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--blanco); background: var(--azul-vivo);
+  border: none; padding: 16px 36px;
+  cursor: pointer; text-decoration: none; display: inline-block;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover { background: var(--azul-claro); transform: translateY(-1px); }
+
+.btn-secondary {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--azul-claro); background: transparent;
+  border: 1px solid rgba(61, 143, 212, 0.4);
+  padding: 16px 36px; cursor: pointer; text-decoration: none; display: inline-block;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-secondary:hover { border-color: var(--azul-claro); color: var(--blanco); }
+
+/* ── CTA FINAL ── */
+.cta-final {
+  padding: 80px 60px;
+  background: var(--azul-fuerte);
+  text-align: center;
+  border-top: 1px solid rgba(61, 143, 212, 0.2);
+}
+.cta-titulo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700; text-transform: uppercase; margin-bottom: 16px;
+}
+.cta-titulo span { color: var(--azul-claro); }
+.cta-desc {
+  font-size: 16px; font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  max-width: 480px; margin: 0 auto 36px; line-height: 1.7;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #060f1c;
+  padding: 40px 60px;
+  display: flex; align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(61, 143, 212, 0.1);
+}
+.footer-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 16px;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.footer-logo span { color: var(--azul-claro); }
+.footer-text { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.3); }
+.footer-dir { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.3); text-align: right; }
+
+/* ── ANIMACIONES ── */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .page-header, .section, .cta-final { padding-left: 24px; padding-right: 24px; }
+  footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+  .footer-dir { text-align: center; }
+}
