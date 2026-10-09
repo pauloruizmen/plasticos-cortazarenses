@@ -2,5 +2,8 @@
 Claude outputs/
 # Copia vieja del primer deploy
 plasticos-cortazarenses/
-# Script local para subir cambios
+# Clon anidado por error
+repo/
+# Scripts locales para subir cambios
 subir-a-github.cmd
+arreglar-github-una-vez.cmd
