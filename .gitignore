@@ -1,0 +1,6 @@
+# Carpeta de trabajo de Claude (no es parte del sitio)
+Claude outputs/
+# Copia vieja del primer deploy
+plasticos-cortazarenses/
+# Script local para subir cambios
+subir-a-github.cmd

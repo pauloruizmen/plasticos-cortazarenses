@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
+<script>document.documentElement.classList.remove('no-js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contacto | Plásticos Cortazarenses</title>
@@ -13,7 +14,11 @@
 <meta property="og:title" content="Contacto | Plásticos Cortazarenses">
 <meta property="og:description" content="Cotiza tu empaque flexible. Cortazar, Guanajuato. Te respondemos en menos de 24 horas en días hábiles.">
 <meta property="og:url" content="https://pauloruizmen.github.io/plasticos-cortazarenses/contacto.html">
+<meta property="og:image" content="https://pauloruizmen.github.io/plasticos-cortazarenses/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pauloruizmen.github.io/plasticos-cortazarenses/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
@@ -48,7 +53,7 @@
     padding: 14px 18px; outline: none; width: 100%;
     transition: border-color 0.2s;
   }
-  .form-input::placeholder { color: rgba(255,255,255,0.25); }
+  .form-input::placeholder { color: rgba(255,255,255,0.55); }
   .form-input:focus { border-color: var(--azul-claro); }
   textarea.form-input { resize: vertical; min-height: 130px; }
   select.form-input { cursor: pointer; }
@@ -57,12 +62,12 @@
   .form-label {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-    color: rgba(255,255,255,0.4); margin-bottom: 6px; display: block;
+    color: rgba(255,255,255,0.55); margin-bottom: 6px; display: block;
   }
   .form-field { display: flex; flex-direction: column; }
 
   .form-nota {
-    font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.3);
+    font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.55);
     margin-top: 4px; line-height: 1.5;
   }
 
@@ -85,8 +90,10 @@
     .form-row { grid-template-columns: 1fr; }
   }
 </style>
+<link rel="stylesheet" href="ux.css">
 </head>
-<body>
+<body class="en-contacto">
+<a class="skip-link" href="#contenido">Ir al contenido</a>
 <nav>
   <a href="index.html" class="nav-logo">
     <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
@@ -98,16 +105,15 @@
     <div class="nav-logo-text">Plásticos Cortazarenses<span>Empaques Flexibles</span></div>
   </a>
   <ul class="nav-links">
-    <li><a href="nosotros.html">Nosotros</a></li>
-    <li><a href="mercados.html">Mercados</a></li>
     <li><a href="productos.html">Productos</a></li>
-    <li><a href="soluciones.html">Soluciones</a></li>
-    <li><a href="porque-nosotros.html">¿Por qué nosotros?</a></li>
-    <li><a href="clientes.html">Clientes</a></li>
-    <li><a href="contacto.html" class="activo">Contacto</a></li>
+    <li><a href="mercados.html">Mercados</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="contacto.html" class="activo" aria-current="page">Contacto</a></li>
   </ul>
-  <a href="contacto.html" class="nav-cta">Cotizar</a>
+  <a class="nav-tel" href="tel:+524111154776" aria-label="Llamar al 411 115 4776"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span>411 115 4776</span></a>
+  <a href="contacto.html" class="nav-cta">Solicitar cotización</a>
 </nav>
+<main id="contenido">
 <div class="page-header">
   <a href="index.html" class="breadcrumb-link">Inicio</a>
   <span class="breadcrumb-sep">›</span>
@@ -123,28 +129,21 @@
       <p class="section-body">Cuéntanos lo que necesitas — una cotización, una urgencia o el desarrollo de un nuevo empaque. Te respondemos a la brevedad.</p>
 
       <div class="dato">
-        <div class="dato-icono">📍</div>
+        <div class="dato-icono" aria-hidden="true">📍</div>
         <div>
           <div class="dato-label">Ubicación</div>
           <div class="dato-valor">Cortazar, Guanajuato, México</div>
         </div>
       </div>
       <div class="dato">
-        <div class="dato-icono">📧</div>
-        <div>
-          <div class="dato-label">Correo electrónico</div>
-          <div class="dato-valor">ventas@plasticoscortazarenses.com</div>
-        </div>
-      </div>
-      <div class="dato">
-        <div class="dato-icono">📞</div>
+        <div class="dato-icono" aria-hidden="true">📞</div>
         <div>
           <div class="dato-label">Teléfono</div>
-          <div class="dato-valor">+52 (411) 000-0000</div>
+          <div class="dato-valor"><a class="tel-link" href="tel:+524111154776">411 115 4776</a></div>
         </div>
       </div>
       <div class="dato">
-        <div class="dato-icono">🕐</div>
+        <div class="dato-icono" aria-hidden="true">🕐</div>
         <div>
           <div class="dato-label">Horario de atención</div>
           <div class="dato-valor">Lunes a viernes · 8:00 am – 6:00 pm<br>Sábado · 8:00 am – 1:00 pm</div>
@@ -152,7 +151,7 @@
       </div>
 
       <div class="urgencia-banner">
-        <span class="urgencia-icono">⚡</span>
+        <span class="urgencia-icono" aria-hidden="true">⚡</span>
         <div>
           <div class="urgencia-titulo">¿Es urgente?</div>
           <div class="urgencia-desc">Llámanos directamente o manda un mensaje indicando que es urgente. Nos especializamos en responder cuando el tiempo no espera.</div>
@@ -162,28 +161,28 @@
 
     <!-- Formulario -->
     <div class="fade-in">
-      <form class="form-grid" onsubmit="enviarForm(event)">
+      <form class="form-grid js-contacto" novalidate>
         <div class="form-row">
           <div class="form-field">
-            <label class="form-label">Nombre</label>
-            <input class="form-input" id="f-nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+            <label class="form-label" for="f-nombre">Nombre</label>
+            <input class="form-input" id="f-nombre" name="Nombre" autocomplete="name" type="text" placeholder="Tu nombre" required>
           </div>
           <div class="form-field">
-            <label class="form-label">Empresa</label>
-            <input class="form-input" id="f-empresa" name="empresa" type="text" placeholder="Nombre de tu empresa">
+            <label class="form-label" for="f-empresa">Empresa</label>
+            <input class="form-input" id="f-empresa" name="Empresa" autocomplete="organization" type="text" placeholder="Nombre de tu empresa">
           </div>
         </div>
         <div class="form-field">
-          <label class="form-label">Correo electrónico</label>
-          <input class="form-input" id="f-correo" name="correo" type="email" placeholder="correo@empresa.com" required>
+          <label class="form-label" for="f-correo">Correo electrónico <span style="font-weight:300;opacity:.6;">(opcional)</span></label>
+          <input class="form-input" id="f-correo" name="email" autocomplete="email" type="email" placeholder="correo@empresa.com">
         </div>
         <div class="form-field">
-          <label class="form-label">Teléfono</label>
-          <input class="form-input" id="f-tel" name="telefono" type="tel" placeholder="Tu teléfono">
+          <label class="form-label" for="f-tel">Teléfono</label>
+          <input class="form-input" id="f-tel" name="Teléfono" autocomplete="tel" inputmode="tel" type="tel" placeholder="10 dígitos" required>
         </div>
         <div class="form-field">
-          <label class="form-label">Tipo de consulta</label>
-          <select class="form-input" id="f-tipo" name="tipo">
+          <label class="form-label" for="f-tipo">Tipo de consulta</label>
+          <select class="form-input" id="f-tipo" name="Tipo de consulta">
             <option value="">Selecciona una opción</option>
             <option>Cotización de producto existente</option>
             <option>Desarrollo de nuevo producto</option>
@@ -192,8 +191,8 @@
           </select>
         </div>
         <div class="form-field">
-          <label class="form-label">Mensaje</label>
-          <textarea class="form-input" id="f-mensaje" name="mensaje" placeholder="Describe tu necesidad — producto, medida, cantidad, tiempo de entrega..." required></textarea>
+          <label class="form-label" for="f-mensaje">Mensaje</label>
+          <textarea class="form-input" id="f-mensaje" name="Mensaje" placeholder="Producto, medida, calibre o kilos, cantidad aproximada y para cuándo lo necesitas" required></textarea>
         </div>
         <div>
           <button type="submit" class="btn-primary">Enviar mensaje</button>
@@ -204,53 +203,53 @@
   </div>
 </section>
 
-<footer>
-  <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
-  <div class="footer-text">© 2026 Plásticos Cortazarenses · Todos los derechos reservados</div>
-  <div class="footer-dir">Cortazar, Guanajuato, México · <a href="aviso-privacidad.html" style="color:inherit;">Aviso de privacidad</a></div>
+</main>
+<footer class="pie">
+  <div class="pie-marca">
+    <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
+    <p>Fabricante de bolsa y película de polietileno en Cortazar, Guanajuato. Extrusión, impresión flexográfica y corte bajo un mismo techo desde 1970.</p>
+  </div>
+  <div>
+    <div class="pie-titulo">Contacto</div>
+    <ul class="pie-lista">
+      <li><a class="tel-link" href="tel:+524111154776"><strong>411 115 4776</strong></a></li>
+      <li><span>Lunes a viernes · 8:00 – 18:00</span></li>
+      <li><span>Sábado · 8:00 – 13:00</span></li>
+      <li><span>Cortazar, Guanajuato, México</span></li>
+    </ul>
+  </div>
+  <div>
+    <div class="pie-titulo">Empresa</div>
+    <ul class="pie-lista">
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="nosotros.html#por-que">¿Por qué nosotros?</a></li>
+      <li><a href="nosotros.html#clientes">Clientes</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="pie-titulo">Qué fabricamos</div>
+    <ul class="pie-lista">
+      <li><a href="productos.html#tipos">Tipos de bolsa y película</a></li>
+      <li><a href="productos.html#catalogo">Catálogo por mercado</a></li>
+      <li><a href="mercados.html">Mercados</a></li>
+      <li><a href="contacto.html">Solicitar cotización</a></li>
+    </ul>
+  </div>
+  <div class="pie-legal">
+    <span>© 2026 Plásticos Cortazarenses S.A. de C.V. · Todos los derechos reservados</span>
+    <a href="aviso-privacidad.html">Aviso de privacidad</a>
+  </div>
 </footer>
 <script>
   const obs = new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}});},{threshold:0.1});
   document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 
-  /* ─────────────────────────────────────────────────────────────
-     El sitio es estático (GitHub Pages): no hay servidor que reciba
-     el formulario. Mientras no se conecte un servicio de formularios,
-     se abre el correo del visitante con todos los datos ya cargados.
-
-     PARA CONECTAR FORMSPREE (recomendado, 5 min y gratis):
-       1. Crea la cuenta en formspree.io y copia tu endpoint.
-       2. En el <form> pon: action="https://formspree.io/f/TU_ID" method="POST"
-       3. Borra el onsubmit="enviarForm(event)" del <form>.
-       Con eso el correo llega solo, sin abrir el cliente del visitante.
-     ───────────────────────────────────────────────────────────── */
-  const DESTINO = 'ventas@plasticoscortazarenses.com';
-
-  function enviarForm(e) {
-    e.preventDefault();
-    const v = id => (document.getElementById(id).value || '').trim();
-    const btn = e.target.querySelector('button[type="submit"]');
-
-    const asunto = (v('f-tipo') || 'Solicitud desde el sitio web') +
-                   (v('f-empresa') ? ' — ' + v('f-empresa') : '');
-    const cuerpo =
-      'Nombre: '   + v('f-nombre')  + '\n' +
-      'Empresa: '  + v('f-empresa') + '\n' +
-      'Correo: '   + v('f-correo')  + '\n' +
-      'Teléfono: ' + v('f-tel')     + '\n' +
-      'Tipo: '     + v('f-tipo')    + '\n\n' +
-      'Mensaje:\n' + v('f-mensaje');
-
-    window.location.href = 'mailto:' + DESTINO +
-      '?subject=' + encodeURIComponent(asunto) +
-      '&body='    + encodeURIComponent(cuerpo);
-
-    btn.textContent = 'Abriendo tu correo…';
-    setTimeout(function(){
-      btn.textContent = 'Enviar mensaje';
-      btn.disabled = false;
-    }, 4000);
-  }
 </script>
+<div class="barra-movil" role="navigation" aria-label="Acciones rápidas">
+  <a class="bm-llamar" href="tel:+524111154776"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span>Llamar</span></a>
+  <a class="bm-cotizar" href="contacto.html">Solicitar cotización</a>
+</div>
+<script src="ux.js"></script>
 </body>
 </html>

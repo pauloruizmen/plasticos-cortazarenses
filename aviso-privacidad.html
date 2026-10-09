@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
+<script>document.documentElement.classList.remove('no-js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aviso de privacidad | Plásticos Cortazarenses</title>
+<meta property="og:image" content="https://pauloruizmen.github.io/plasticos-cortazarenses/og-image.jpg">
 <meta name="description" content="Aviso de privacidad de Plásticos Cortazarenses S.A. de C.V. conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.">
 <link rel="canonical" href="https://pauloruizmen.github.io/plasticos-cortazarenses/aviso-privacidad.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%230a1628%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-family=%22Arial,sans-serif%22 font-size=%2232%22 font-weight=%22bold%22 fill=%22%233d8fd4%22 text-anchor=%22middle%22%3EPC%3C/text%3E%3C/svg%3E">
@@ -31,8 +33,10 @@
     color: var(--azul-claro); margin-top: 48px; display: block;
   }
 </style>
+<link rel="stylesheet" href="ux.css">
 </head>
 <body>
+<a class="skip-link" href="#contenido">Ir al contenido</a>
 <nav>
   <a href="index.html" class="nav-logo">
     <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
@@ -44,16 +48,15 @@
     <div class="nav-logo-text">Plásticos Cortazarenses<span>Empaques Flexibles</span></div>
   </a>
   <ul class="nav-links">
-    <li><a href="nosotros.html">Nosotros</a></li>
-    <li><a href="mercados.html">Mercados</a></li>
     <li><a href="productos.html">Productos</a></li>
-    <li><a href="soluciones.html">Soluciones</a></li>
-    <li><a href="porque-nosotros.html">¿Por qué nosotros?</a></li>
-    <li><a href="clientes.html">Clientes</a></li>
+    <li><a href="mercados.html">Mercados</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
-  <a href="contacto.html" class="nav-cta">Cotizar</a>
+  <a class="nav-tel" href="tel:+524111154776" aria-label="Llamar al 411 115 4776"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span>411 115 4776</span></a>
+  <a href="contacto.html" class="nav-cta">Solicitar cotización</a>
 </nav>
+<main id="contenido">
 <div class="page-header">
   <a href="index.html" class="breadcrumb-link">Inicio</a>
   <span class="breadcrumb-sep">&rsaquo;</span>
@@ -91,15 +94,16 @@
       <li>Elaborar y enviarte propuestas de producto</li>
     </ul>
     <p>No usamos tus datos para fines distintos ni los transferimos a terceros sin tu consentimiento,
-      salvo cuando la ley lo exija.</p>
+      salvo cuando la ley lo exija. Para hacernos llegar tu mensaje, el formulario utiliza un servicio
+      de envío de correo (FormSubmit) que actúa únicamente como intermediario técnico.</p>
 
     <h3>Tus derechos ARCO</h3>
     <p>
       En todo momento puedes solicitar el Acceso, Rectificación, Cancelación u Oposición al tratamiento
       de tus datos personales, así como revocar el consentimiento que nos hayas otorgado. Para ejercer
-      cualquiera de estos derechos escribe a
-      <a href="mailto:ventas@plasticoscortazarenses.com">ventas@plasticoscortazarenses.com</a>
-      indicando tu nombre, el derecho que deseas ejercer y un medio de contacto para responderte.
+      cualquiera de estos derechos envíanos un mensaje desde el
+      <a href="contacto.html">formulario de contacto</a> con el asunto «Derechos ARCO», o llámanos al
+      <a class="tel-link" href="tel:+524111154776">411 115 4776</a>, indicando tu nombre, el derecho que deseas ejercer y un medio de contacto para responderte.
       Damos respuesta en un plazo máximo de 20 días hábiles.
     </p>
 
@@ -119,10 +123,48 @@
   </div>
 </section>
 
-<footer>
-  <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
-  <div class="footer-text">© 2026 Plásticos Cortazarenses · Todos los derechos reservados</div>
-  <div class="footer-dir">Cortazar, Guanajuato, México · <a href="aviso-privacidad.html" style="color:inherit;">Aviso de privacidad</a></div>
+</main>
+<footer class="pie">
+  <div class="pie-marca">
+    <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
+    <p>Fabricante de bolsa y película de polietileno en Cortazar, Guanajuato. Extrusión, impresión flexográfica y corte bajo un mismo techo desde 1970.</p>
+  </div>
+  <div>
+    <div class="pie-titulo">Contacto</div>
+    <ul class="pie-lista">
+      <li><a class="tel-link" href="tel:+524111154776"><strong>411 115 4776</strong></a></li>
+      <li><span>Lunes a viernes · 8:00 – 18:00</span></li>
+      <li><span>Sábado · 8:00 – 13:00</span></li>
+      <li><span>Cortazar, Guanajuato, México</span></li>
+    </ul>
+  </div>
+  <div>
+    <div class="pie-titulo">Empresa</div>
+    <ul class="pie-lista">
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="nosotros.html#por-que">¿Por qué nosotros?</a></li>
+      <li><a href="nosotros.html#clientes">Clientes</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="pie-titulo">Qué fabricamos</div>
+    <ul class="pie-lista">
+      <li><a href="productos.html#tipos">Tipos de bolsa y película</a></li>
+      <li><a href="productos.html#catalogo">Catálogo por mercado</a></li>
+      <li><a href="mercados.html">Mercados</a></li>
+      <li><a href="contacto.html">Solicitar cotización</a></li>
+    </ul>
+  </div>
+  <div class="pie-legal">
+    <span>© 2026 Plásticos Cortazarenses S.A. de C.V. · Todos los derechos reservados</span>
+    <a href="aviso-privacidad.html">Aviso de privacidad</a>
+  </div>
 </footer>
+<div class="barra-movil" role="navigation" aria-label="Acciones rápidas">
+  <a class="bm-llamar" href="tel:+524111154776"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span>Llamar</span></a>
+  <a class="bm-cotizar" href="contacto.html">Solicitar cotización</a>
+</div>
+<script src="ux.js"></script>
 </body>
 </html>

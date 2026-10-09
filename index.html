@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
+<script>document.documentElement.classList.remove('no-js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Plásticos Cortazarenses | Empaques Flexibles</title>
@@ -13,7 +14,11 @@
 <meta property="og:title" content="Plásticos Cortazarenses | Empaques Flexibles">
 <meta property="og:description" content="Fabricamos bolsa y película de polietileno en Cortazar, Guanajuato. Empaque flexible para hortaliza, hielo, invernadero y textil — con respuesta en urgencias.">
 <meta property="og:url" content="https://pauloruizmen.github.io/plasticos-cortazarenses/">
+<meta property="og:image" content="https://pauloruizmen.github.io/plasticos-cortazarenses/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pauloruizmen.github.io/plasticos-cortazarenses/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
@@ -543,7 +548,7 @@
     transition: border-color 0.2s;
     width: 100%;
   }
-  .form-input::placeholder { color: rgba(255,255,255,0.3); }
+  .form-input::placeholder { color: rgba(255,255,255,0.55); }
   .form-input:focus { border-color: var(--azul-claro); }
 
   textarea.form-input {
@@ -574,14 +579,14 @@
   .footer-text {
     font-size: 13px;
     font-weight: 300;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.55);
     text-align: center;
   }
 
   .footer-dir {
     font-size: 12px;
     font-weight: 300;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.55);
     text-align: right;
   }
 
@@ -615,12 +620,14 @@
     footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
   }
 </style>
+<link rel="stylesheet" href="ux.css">
 </head>
 <body>
+<a class="skip-link" href="#contenido">Ir al contenido</a>
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">
+  <a href="index.html" class="nav-logo">
     <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="1" y="1" width="36" height="36" rx="8" fill="rgba(29,106,184,0.15)" stroke="rgba(61,143,212,0.5)" stroke-width="1"/>
       <circle cx="19" cy="19" r="13" stroke="#3d8fd4" stroke-width="1.5" fill="none"/>
@@ -633,16 +640,15 @@
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="nosotros.html">Nosotros</a></li>
-    <li><a href="mercados.html">Mercados</a></li>
     <li><a href="productos.html">Productos</a></li>
-    <li><a href="soluciones.html">Soluciones</a></li>
-    <li><a href="porque-nosotros.html">¿Por qué nosotros?</a></li>
-    <li><a href="clientes.html">Clientes</a></li>
+    <li><a href="mercados.html">Mercados</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
-  <a href="contacto.html" class="nav-cta">Cotizar</a>
+  <a class="nav-tel" href="tel:+524111154776" aria-label="Llamar al 411 115 4776"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span>411 115 4776</span></a>
+  <a href="contacto.html" class="nav-cta">Solicitar cotización</a>
 </nav>
+<main id="contenido">
 
 <!-- HERO -->
 <section class="hero">
@@ -658,13 +664,13 @@
       lo necesitas
     </h1>
     <p class="hero-desc">
-      Fabricamos empaques flexibles para la industria agroalimentaria y más.
-      Especialistas en hortalizas, verduras, hielo y almohadas —
-      con la capacidad de responder en tiempos de urgencia.
+      Bolsa y película de polietileno fabricadas en Cortazar, Guanajuato:
+      tubular, impresa hasta 6 colores, con troquel o fuelle. Para hortaliza,
+      hielo, invernadero y textil — y con respuesta cuando el pedido es urgente.
     </p>
     <div class="hero-actions">
-      <a href="#productos" class="btn-primary">Ver productos</a>
-      <a href="#contacto" class="btn-secondary">Contacto</a>
+      <a href="contacto.html" class="btn-primary">Solicitar cotización</a>
+      <a href="#productos" class="btn-secondary">Ver qué fabricamos</a>
     </div>
   </div>
 
@@ -678,8 +684,8 @@
       <div class="stat-label">Productos activos</div>
     </div>
     <div class="stat">
-      <div class="stat-num">4</div>
-      <div class="stat-label">Industrias atendidas</div>
+      <div class="stat-num">5</div>
+      <div class="stat-label">Sectores atendidos</div>
     </div>
     <div class="stat">
       <div class="stat-num">24h</div>
@@ -705,12 +711,32 @@
     </p>
     <a href="nosotros.html" class="btn-primary">Conoce nuestra historia</a>
   </div>
-  <div class="nosotros-visual fade-in">
-    <div class="nosotros-visual-inner">
-      <div class="nosotros-visual-num">PC</div>
-      <div class="nosotros-visual-text">Cortazar, Guanajuato</div>
+  <div class="planta-card fade-in" aria-label="Datos de planta">
+    <div>
+      <div class="planta-num">1970</div>
+      <div class="planta-label">Año de fundación</div>
+      <div class="planta-desc">Tres generaciones en Cortazar. Nombre actual desde 2014.</div>
     </div>
-    <div class="nosotros-visual-bar"></div>
+    <div>
+      <div class="planta-num">10</div>
+      <div class="planta-label">Máquinas</div>
+      <div class="planta-desc">3 extrusión · 3 impresión · 4 corte</div>
+    </div>
+    <div>
+      <div class="planta-num">25+</div>
+      <div class="planta-label">Ton / mes</div>
+      <div class="planta-desc">De polietileno procesado</div>
+    </div>
+    <div>
+      <div class="planta-num">6</div>
+      <div class="planta-label">Colores</div>
+      <div class="planta-desc">Impresión flexográfica con pantones</div>
+    </div>
+    <div>
+      <div class="planta-num">3</div>
+      <div class="planta-label">Formas de entrega</div>
+      <div class="planta-desc">Flota propia, transportista o paquetería</div>
+    </div>
   </div>
 </section>
 
@@ -721,25 +747,29 @@
     <h2 class="section-title">Nuestros <span>mercados</span></h2>
   </div>
   <div class="mercados-grid">
-    <a class="mercado-card fade-in" href="#contacto">
-      <span class="mercado-icon">🌿</span>
+    <a class="mercado-card fade-in" href="mercados.html#hortalizas">
+      <span class="mercado-icon" aria-hidden="true">🥕</span>
       <div class="mercado-nombre">Hortalizas y verduras</div>
-      <div class="mercado-desc">Bolsas tubulares y películas diseñadas para el empaque de productos frescos del campo.</div>
+      <div class="mercado-desc">Bolsa tubular y película para zanahoria, lechuga, apio y espinaca. Nuestro mercado principal.</div>
+      <span class="card-link">Ver mercado</span>
     </a>
-    <a class="mercado-card fade-in" href="#contacto">
-      <span class="mercado-icon">🧊</span>
+    <a class="mercado-card fade-in" href="mercados.html#hielo">
+      <span class="mercado-icon" aria-hidden="true">🧊</span>
       <div class="mercado-nombre">Hielo</div>
-      <div class="mercado-desc">Empaques resistentes y herméticos para bolsas de hielo en diferentes presentaciones.</div>
+      <div class="mercado-desc">Bolsa resistente y hermética de 1.5 a 15 kg, impresa con tu marca. Más de 35 marcas atendidas.</div>
+      <span class="card-link">Ver mercado</span>
     </a>
-    <a class="mercado-card fade-in" href="#contacto">
-      <span class="mercado-icon">🛏️</span>
+    <a class="mercado-card fade-in" href="mercados.html#invernadero">
+      <span class="mercado-icon" aria-hidden="true">🌱</span>
+      <div class="mercado-nombre">Invernadero</div>
+      <div class="mercado-desc">Rollos y película blanco/negro con inhibidor UV y bolsa de cultivo.</div>
+      <span class="card-link">Ver mercado</span>
+    </a>
+    <a class="mercado-card fade-in" href="mercados.html#almohadas">
+      <span class="mercado-icon" aria-hidden="true">🛏️</span>
       <div class="mercado-nombre">Almohadas y textil</div>
-      <div class="mercado-desc">Bolsas de presentación y protección para productos de cama, almohadas y ropa de hogar.</div>
-    </a>
-    <a class="mercado-card fade-in" href="#contacto">
-      <span class="mercado-icon">🏭</span>
-      <div class="mercado-nombre">Industrial</div>
-      <div class="mercado-desc">Soluciones de empaque a medida para distintos usos industriales y agrícolas.</div>
+      <div class="mercado-desc">Bolsa de presentación que cumple la especificación de las cadenas de autoservicio.</div>
+      <span class="card-link">Ver mercado</span>
     </a>
   </div>
 </section>
@@ -751,43 +781,44 @@
     <h2 class="section-title">Nuestros <span>productos</span></h2>
   </div>
   <div class="productos-grid">
-    <div class="producto-card fade-in">
+    <a class="producto-card fade-in" href="productos.html#tubular">
       <div class="producto-num">01</div>
       <div class="producto-nombre">Bolsas tubulares</div>
-      <div class="producto-desc">Fabricadas por extrusión en monocapa y coextrusión bicapa, con y sin tratamiento corona para impresión.</div>
+      <div class="producto-desc">Extrusión en monocapa y coextrusión bicapa, con o sin tratamiento corona para impresión.</div>
       <div class="producto-linea"></div>
-    </div>
-    <div class="producto-card fade-in">
+    </a>
+    <a class="producto-card fade-in" href="productos.html#rollo">
       <div class="producto-num">02</div>
-      <div class="producto-nombre">Película plástica</div>
-      <div class="producto-desc">Película en rollo para empaque de hortalizas, verduras, semillas y aplicaciones especiales.</div>
+      <div class="producto-nombre">Película en rollo</div>
+      <div class="producto-desc">Plana o tubular, para empacadora automática, invernadero y uso industrial.</div>
       <div class="producto-linea"></div>
-    </div>
-    <div class="producto-card fade-in">
+    </a>
+    <a class="producto-card fade-in" href="productos.html#impresa">
       <div class="producto-num">03</div>
       <div class="producto-nombre">Bolsas impresas</div>
-      <div class="producto-desc">Impresión flexográfica hasta 6 colores con pantones personalizados. Tu marca en cada empaque.</div>
+      <div class="producto-desc">Flexografía hasta 6 colores con pantones personalizados. Tu marca en cada empaque.</div>
       <div class="producto-linea"></div>
-    </div>
-    <div class="producto-card fade-in">
+    </a>
+    <a class="producto-card fade-in" href="productos.html#troquel">
       <div class="producto-num">04</div>
       <div class="producto-nombre">Bolsas con troquel</div>
-      <div class="producto-desc">Corte y troquelado para bolsas de presentación con acabados específicos para cada cliente.</div>
+      <div class="producto-desc">Asas, perforaciones o formas específicas para bolsa de presentación.</div>
       <div class="producto-linea"></div>
-    </div>
-    <div class="producto-card fade-in">
+    </a>
+    <a class="producto-card fade-in" href="productos.html#fuelle">
       <div class="producto-num">05</div>
-      <div class="producto-nombre">Empaque para hielo</div>
-      <div class="producto-desc">Bolsas resistentes y sellables diseñadas específicamente para el manejo y distribución de hielo.</div>
+      <div class="producto-nombre">Bolsas con fuelle</div>
+      <div class="producto-desc">Fuelle lateral o de fondo para más capacidad en productos pesados o voluminosos.</div>
       <div class="producto-linea"></div>
-    </div>
-    <div class="producto-card fade-in" style="border-color: rgba(61,143,212,0.4); background: linear-gradient(135deg, var(--azul-medio), rgba(29,106,184,0.3));">
-      <div class="producto-num" style="color: var(--azul-claro);">⚡ Urgencias</div>
-      <div class="producto-nombre">Entregas express</div>
-      <div class="producto-desc">Nos especializamos en responder cuando el tiempo apremia. Contáctanos y evaluamos tu requerimiento urgente.</div>
-      <div class="producto-linea" style="background: var(--azul-claro); width: 60px;"></div>
-    </div>
+    </a>
+    <a class="producto-card fade-in" href="productos.html#medida">
+      <div class="producto-num">06</div>
+      <div class="producto-nombre">Desarrollo a medida</div>
+      <div class="producto-desc">Fórmula, calibre y diseño desde cero para lo que tu producto necesite.</div>
+      <div class="producto-linea"></div>
+    </a>
   </div>
+  <p class="fade-in" style="margin-top:28px;"><a href="productos.html" class="card-link" style="font-size:14px;">Ver el catálogo completo por mercado</a></p>
 </section>
 
 <!-- CONTACTO -->
@@ -801,45 +832,72 @@
     </p>
 
     <div class="contacto-dato">
-      <div class="contacto-icono">📍</div>
+      <div class="contacto-icono" aria-hidden="true">📍</div>
       <div>
         <div class="contacto-label">Dirección</div>
         <div class="contacto-valor">Cortazar, Guanajuato, México</div>
       </div>
     </div>
     <div class="contacto-dato">
-      <div class="contacto-icono">📧</div>
-      <div>
-        <div class="contacto-label">Correo</div>
-        <div class="contacto-valor">ventas@plasticoscortazarenses.com</div>
-      </div>
-    </div>
-    <div class="contacto-dato">
-      <div class="contacto-icono">📞</div>
+      <div class="contacto-icono" aria-hidden="true">📞</div>
       <div>
         <div class="contacto-label">Teléfono</div>
-        <div class="contacto-valor">+52 (411) 000-0000</div>
+        <div class="contacto-valor"><a class="tel-link" href="tel:+524111154776">411 115 4776</a></div>
       </div>
     </div>
   </div>
 
-  <form class="contacto-form fade-in" onsubmit="return false;">
+  <form class="contacto-form fade-in js-contacto" novalidate>
     <div class="form-row">
-      <input class="form-input" type="text" placeholder="Nombre">
-      <input class="form-input" type="text" placeholder="Empresa">
+      <input class="form-input" type="text" name="Nombre" placeholder="Nombre" aria-label="Nombre" autocomplete="name" required>
+      <input class="form-input" type="text" name="Empresa" placeholder="Empresa" aria-label="Empresa" autocomplete="organization">
     </div>
-    <input class="form-input" type="email" placeholder="Correo electrónico">
-    <input class="form-input" type="tel" placeholder="Teléfono">
-    <textarea class="form-input" placeholder="¿En qué podemos ayudarte?"></textarea>
+    <input class="form-input" type="email" name="email" placeholder="Correo electrónico (opcional)" aria-label="Correo electrónico" autocomplete="email">
+    <input class="form-input" type="tel" name="Teléfono" placeholder="Teléfono" aria-label="Teléfono" autocomplete="tel" inputmode="tel" required>
+    <textarea class="form-input" name="Mensaje" placeholder="Producto, medida, cantidad aproximada y para cuándo lo necesitas" aria-label="Mensaje" required></textarea>
     <button type="submit" class="btn-primary" style="align-self:flex-start">Enviar mensaje</button>
+    <p style="font-size:12px;color:rgba(255,255,255,0.55);margin:0;">Al enviar aceptas nuestro <a href="aviso-privacidad.html" style="color:inherit;">aviso de privacidad</a>.</p>
   </form>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
-  <div class="footer-text">© 2026 Plásticos Cortazarenses · Todos los derechos reservados</div>
-  <div class="footer-dir">Cortazar, Guanajuato, México · <a href="aviso-privacidad.html" style="color:inherit;">Aviso de privacidad</a></div>
+</main>
+<footer class="pie">
+  <div class="pie-marca">
+    <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
+    <p>Fabricante de bolsa y película de polietileno en Cortazar, Guanajuato. Extrusión, impresión flexográfica y corte bajo un mismo techo desde 1970.</p>
+  </div>
+  <div>
+    <div class="pie-titulo">Contacto</div>
+    <ul class="pie-lista">
+      <li><a class="tel-link" href="tel:+524111154776"><strong>411 115 4776</strong></a></li>
+      <li><span>Lunes a viernes · 8:00 – 18:00</span></li>
+      <li><span>Sábado · 8:00 – 13:00</span></li>
+      <li><span>Cortazar, Guanajuato, México</span></li>
+    </ul>
+  </div>
+  <div>
+    <div class="pie-titulo">Empresa</div>
+    <ul class="pie-lista">
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="nosotros.html#por-que">¿Por qué nosotros?</a></li>
+      <li><a href="nosotros.html#clientes">Clientes</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="pie-titulo">Qué fabricamos</div>
+    <ul class="pie-lista">
+      <li><a href="productos.html#tipos">Tipos de bolsa y película</a></li>
+      <li><a href="productos.html#catalogo">Catálogo por mercado</a></li>
+      <li><a href="mercados.html">Mercados</a></li>
+      <li><a href="contacto.html">Solicitar cotización</a></li>
+    </ul>
+  </div>
+  <div class="pie-legal">
+    <span>© 2026 Plásticos Cortazarenses S.A. de C.V. · Todos los derechos reservados</span>
+    <a href="aviso-privacidad.html">Aviso de privacidad</a>
+  </div>
 </footer>
 
 <script>
@@ -856,5 +914,10 @@
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
+<div class="barra-movil" role="navigation" aria-label="Acciones rápidas">
+  <a class="bm-llamar" href="tel:+524111154776"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span>Llamar</span></a>
+  <a class="bm-cotizar" href="contacto.html">Solicitar cotización</a>
+</div>
+<script src="ux.js"></script>
 </body>
 </html>

@@ -178,8 +178,8 @@ footer {
   color: rgba(255,255,255,0.5);
 }
 .footer-logo span { color: var(--azul-claro); }
-.footer-text { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.3); }
-.footer-dir { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.3); text-align: right; }
+.footer-text { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.55); }
+.footer-dir { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.55); text-align: right; }
 
 /* ── ANIMACIONES ── */
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
