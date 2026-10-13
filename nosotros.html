@@ -7,7 +7,7 @@
 <title>Nosotros | Plásticos Cortazarenses</title>
 <meta name="description" content="Plásticos Cortazarenses: fabricante de bolsa de polietileno en Cortazar, Guanajuato, desde 1970. Planta de 10 máquinas, más de 100 clientes activos.">
 <link rel="canonical" href="https://pauloruizmen.github.io/plasticos-cortazarenses/nosotros.html">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%230a1628%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-family=%22Arial,sans-serif%22 font-size=%2232%22 font-weight=%22bold%22 fill=%22%233d8fd4%22 text-anchor=%22middle%22%3EPC%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%230B1F3A%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-family=%22Arial,sans-serif%22 font-size=%2232%22 font-weight=%22bold%22 fill=%22%238CC3EE%22 text-anchor=%22middle%22%3EPC%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Plásticos Cortazarenses">
 <meta property="og:locale" content="es_MX">
@@ -18,728 +18,173 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pauloruizmen.github.io/plasticos-cortazarenses/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --azul-oscuro:  #0a1628;
-    --azul-medio:   #0f2a52;
-    --azul-fuerte:  #1a4480;
-    --azul-vivo:    #1d6ab8;
-    --azul-claro:   #3d8fd4;
-    --azul-cielo:   #72b8e8;
-    --blanco:       #ffffff;
-    --gris-texto:   #8ea8c3;
-  }
-
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Barlow', sans-serif;
-    background: var(--azul-oscuro);
-    color: var(--blanco);
-    overflow-x: hidden;
-  }
-
-  /* ── NAV (igual en todas las páginas) ── */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 60px;
-    height: 72px;
-    background: rgba(10, 22, 40, 0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(61, 143, 212, 0.15);
-  }
-  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .nav-logo-text {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700; font-size: 18px;
-    letter-spacing: 0.04em; text-transform: uppercase;
-    color: var(--blanco); line-height: 1.1;
-  }
-  .nav-logo-text span { color: var(--azul-claro); font-weight: 300; font-size: 13px; display: block; letter-spacing: 0.12em; }
-  .nav-links { display: flex; gap: 28px; list-style: none; }
-  .nav-links a {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 13px; font-weight: 400;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--gris-texto); text-decoration: none; transition: color 0.2s;
-  }
-  .nav-links a:hover, .nav-links a.activo { color: var(--azul-claro); }
-  .nav-cta {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 13px; font-weight: 600;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--blanco); background: var(--azul-vivo);
-    border: none; padding: 10px 24px;
-    cursor: pointer; text-decoration: none; transition: background 0.2s;
-  }
-  .nav-cta:hover { background: var(--azul-claro); }
-
-  /* ── PAGE HERO ── */
-  .page-hero {
-    padding: 100px 60px 32px;
-    background: var(--azul-oscuro);
-    border-bottom: 1px solid rgba(61, 143, 212, 0.12);
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  .page-breadcrumb {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 12px; font-weight: 400;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--gris-texto);
-    text-decoration: none;
-  }
-  .page-breadcrumb:hover { color: var(--azul-claro); }
-  .page-sep {
-    color: rgba(61,143,212,0.4);
-    font-size: 12px;
-  }
-  .page-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 13px; font-weight: 600;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--azul-claro);
-  }
-
-  /* ── SECCIÓN INTRO ── */
-  .section { padding: 80px 60px; }
-  .section-alt { background: var(--azul-medio); }
-
-  .intro-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-  }
-
-  .section-tag {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 12px; font-weight: 600;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--azul-claro); margin-bottom: 16px;
-  }
-  .section-tag::before { content: ''; display: block; width: 28px; height: 1px; background: var(--azul-claro); }
-
-  .section-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(32px, 3.5vw, 48px);
-    font-weight: 700; line-height: 1;
-    text-transform: uppercase; margin-bottom: 24px;
-  }
-  .section-title span { color: var(--azul-claro); }
-
-  .section-body {
-    font-size: 16px; font-weight: 300;
-    line-height: 1.8; color: rgba(255,255,255,0.65);
-    margin-bottom: 20px;
-  }
-
-  /* ── MISIÓN VISIÓN VALORES ── */
-  .mvv-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-  }
-
-  .mvv-card {
-    background: var(--azul-fuerte);
-    padding: 52px 40px;
-    border: 1px solid rgba(61, 143, 212, 0.1);
-    transition: border-color 0.2s;
-  }
-  .mvv-card:hover { border-color: rgba(61, 143, 212, 0.4); }
-
-  .mvv-icono {
-    font-size: 28px; margin-bottom: 20px; display: block;
-  }
-
-  .mvv-titulo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--azul-claro); margin-bottom: 16px;
-  }
-
-  .mvv-texto {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 22px; font-weight: 700;
-    text-transform: uppercase; line-height: 1.15;
-    color: var(--blanco); margin-bottom: 20px;
-  }
-
-  .mvv-desc {
-    font-size: 14px; font-weight: 300;
-    line-height: 1.7; color: rgba(255,255,255,0.6);
-  }
-
-  .mvv-linea {
-    width: 32px; height: 2px;
-    background: var(--azul-claro);
-    margin-bottom: 20px;
-  }
-
-  /* ── VALORES ── */
-  .valores-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin-top: 56px;
-  }
-
-  .valor-card {
-    background: var(--azul-medio);
-    border: 1px solid rgba(61, 143, 212, 0.12);
-    padding: 36px 28px;
-    text-align: center;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-  .valor-card:hover {
-    border-color: rgba(61, 143, 212, 0.4);
-    transform: translateY(-3px);
-  }
-
-  .valor-icono { font-size: 32px; margin-bottom: 16px; display: block; }
-
-  .valor-nombre {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 20px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.04em;
-    color: var(--blanco); margin-bottom: 10px;
-  }
-
-  .valor-desc {
-    font-size: 13px; font-weight: 300;
-    line-height: 1.6; color: rgba(255,255,255,0.5);
-  }
-
-  /* ── PROCESO ── */
-  .proceso-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    margin-top: 56px;
-  }
-
-  .proceso-paso {
-    padding: 44px 36px;
-    border: 1px solid rgba(61, 143, 212, 0.1);
-    position: relative;
-  }
-  .proceso-paso:hover { background: rgba(29, 106, 184, 0.08); }
-
-  .proceso-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 48px; font-weight: 700;
-    color: rgba(61, 143, 212, 0.15);
-    line-height: 1; margin-bottom: 16px;
-  }
-
-  .proceso-nombre {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 20px; font-weight: 700;
-    text-transform: uppercase; color: var(--blanco);
-    margin-bottom: 10px;
-  }
-
-  .proceso-desc {
-    font-size: 14px; font-weight: 300;
-    line-height: 1.6; color: rgba(255,255,255,0.55);
-  }
-
-  /* ── CTA FINAL ── */
-  .cta-final {
-    padding: 80px 60px;
-    background: var(--azul-fuerte);
-    text-align: center;
-    border-top: 1px solid rgba(61, 143, 212, 0.2);
-  }
-  .cta-titulo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(32px, 4vw, 52px);
-    font-weight: 700; text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-  .cta-titulo span { color: var(--azul-claro); }
-  .cta-desc {
-    font-size: 16px; font-weight: 300;
-    color: rgba(255,255,255,0.6);
-    max-width: 480px; margin: 0 auto 36px;
-    line-height: 1.7;
-  }
-
-  .btn-primary {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 14px; font-weight: 600;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--blanco); background: var(--azul-vivo);
-    border: none; padding: 16px 36px;
-    cursor: pointer; text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-    display: inline-block;
-  }
-  .btn-primary:hover { background: var(--azul-claro); transform: translateY(-1px); }
-
-  /* ── FOOTER ── */
-  footer {
-    background: #060f1c;
-    padding: 40px 60px;
-    display: flex; align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid rgba(61, 143, 212, 0.1);
-  }
-  .footer-logo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700; font-size: 16px;
-    letter-spacing: 0.04em; text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-  }
-  .footer-logo span { color: var(--azul-claro); }
-  .footer-text { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.55); }
-  .footer-dir { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.55); text-align: right; }
-
-  /* ── ANIMACIONES ── */
-  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    nav { padding: 0 24px; }
-    .nav-links { display: none; }
-    .page-hero, .section, .cta-final { padding-left: 24px; padding-right: 24px; }
-    .intro-grid { grid-template-columns: 1fr; gap: 40px; }
-    .mvv-grid { grid-template-columns: 1fr; }
-    .valores-grid { grid-template-columns: 1fr 1fr; }
-    .proceso-grid { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
-  }
-  @media (max-width: 600px) {
-    .valores-grid { grid-template-columns: 1fr; }
-    .valor-card { min-width: 0; }
-  }
-  .razones-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr);
-    gap: 2px; margin-top: 48px;
-  }
-  .razon-card {
-    background: var(--azul-medio);
-    border: 1px solid rgba(61,143,212,0.1);
-    padding: 52px 44px;
-    transition: border-color 0.2s;
-    display: grid; grid-template-columns: 60px 1fr; gap: 24px; align-items: start;
-  }
-  .razon-card:hover { border-color: rgba(61,143,212,0.35); }
-  .razon-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 48px; font-weight: 700;
-    color: rgba(61,143,212,0.15); line-height: 1;
-  }
-  .razon-nombre {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 22px; font-weight: 700; text-transform: uppercase;
-    color: var(--blanco); margin-bottom: 12px;
-  }
-  .razon-desc { font-size: 15px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.6); }
-  .razon-tag {
-    display: inline-block; margin-top: 16px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--azul-claro);
-    border-top: 1px solid rgba(61,143,212,0.3); padding-top: 12px;
-  }
-  @media (max-width: 900px) {
-    .razones-grid { grid-template-columns: 1fr; }
-    .razon-card { grid-template-columns: 1fr; gap: 12px; }
-  }
-  .stats-row {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin: 0 0 48px;
-  }
-  .stat-box {
-    background: var(--azul-fuerte);
-    border: 1px solid rgba(61,143,212,0.15);
-    padding: 36px 28px; text-align: center;
-  }
-  .stat-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 52px; font-weight: 700; color: var(--azul-claro); line-height: 1;
-  }
-  .stat-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-    color: rgba(255,255,255,0.55); margin-top: 6px;
-  }
-  .testimonial-section { padding: 80px 60px; background: var(--azul-fuerte); }
-  .testimonial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
-  .testi-card {
-    background: rgba(10,22,40,0.5);
-    border: 1px solid rgba(61,143,212,0.15);
-    padding: 36px;
-  }
-  .testi-texto {
-    font-size: 15px; font-weight: 300; line-height: 1.7;
-    color: rgba(255,255,255,0.75); font-style: italic; margin-bottom: 20px;
-  }
-  .testi-sector {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--azul-claro);
-  }
-  @media (max-width: 900px) {
-    .testimonial-grid { grid-template-columns: 1fr; }
-    .stats-row { grid-template-columns: 1fr 1fr; }
-    .testimonial-section { padding: 60px 24px; }
-  }
-
-  /* ── Sub-navegación de la página ── */
-  .subnav {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    padding: 20px 60px; background: var(--azul-oscuro);
-    border-bottom: 1px solid rgba(61,143,212,0.12);
-  }
-  .subnav a {
-    font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600;
-    letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
-    color: var(--gris-texto); border: 1px solid rgba(61,143,212,0.2);
-    padding: 8px 18px; transition: all 0.2s;
-  }
-  .subnav a:hover { color: var(--blanco); border-color: var(--azul-claro); }
-  @media (max-width: 900px) { .subnav { padding: 16px 24px; } }
-  .mvv-grid { grid-template-columns: 1fr 1fr; }
-  .valores-sub { margin: 56px 0 24px; }
-</style>
-<link rel="stylesheet" href="ux.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pc.css">
 </head>
 <body>
 <a class="skip-link" href="#contenido">Ir al contenido</a>
-
-<!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo">
-    <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
-      <rect x="1" y="1" width="36" height="36" rx="8" fill="rgba(29,106,184,0.15)" stroke="rgba(61,143,212,0.5)" stroke-width="1"/>
-      <circle cx="19" cy="19" r="13" stroke="#3d8fd4" stroke-width="1.5" fill="none"/>
-      <circle cx="19" cy="19" r="9" stroke="#1d6ab8" stroke-width="1" fill="none"/>
-      <text x="19" y="24" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="15" fill="#72b8e8">P</text>
-    </svg>
-    <div class="nav-logo-text">
-      Plásticos Cortazarenses
-      <span>Empaques Flexibles</span>
-    </div>
-  </a>
+<nav class="site-nav" aria-label="Principal">
+  <a href="index.html" class="nav-logo" aria-label="Plásticos Cortazarenses, inicio"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="8" fill="#0B1F3A"/><circle cx="20" cy="20" r="12" stroke="#8CC3EE" stroke-width="1.6"/><circle cx="20" cy="20" r="8" stroke="#2F80D0" stroke-width="1.2"/><text x="20" y="25.5" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="15" fill="#fff">P</text></svg><span class="nav-logo-text">Plásticos Cortazarenses<span>Empaques flexibles</span></span></a>
   <ul class="nav-links">
     <li><a href="productos.html">Productos</a></li>
     <li><a href="mercados.html">Mercados</a></li>
     <li><a href="nosotros.html" class="activo" aria-current="page">Nosotros</a></li>
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
-  <a class="nav-tel" href="tel:+524111154776" aria-label="Llamar al 411 115 4776"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span>411 115 4776</span></a>
+  <a class="nav-tel" href="tel:+524111154776"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg>411 115 4776</a>
   <a href="contacto.html" class="nav-cta">Solicitar cotización</a>
 </nav>
 <main id="contenido">
-
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <a href="index.html" class="page-breadcrumb">Inicio</a>
-  <span class="page-sep">›</span>
-  <span class="page-title">Nosotros</span>
+<section class="pagina-hero">
+  <figure class="media" data-foto="img/nosotros-hero.jpg
+Foto horizontal amplia (2400 px) — fachada de la planta, o el equipo frente a la planta. Se oscurece encima."><img class="media-el" src="img/nosotros-hero.jpg" alt="" loading="lazy" decoding="async"></figure>
+  <div class="pagina-hero-in">
+    <div class="migas"><a href="index.html">Inicio</a><span>/</span><span>Nosotros</span></div>
+    <div class="eyebrow">Desde 1970</div>
+    <h1>Tres generaciones haciendo bolsa en Cortazar</h1>
+    <p>Una empresa familiar de Guanajuato que surte a más de cien clientes en México.</p>
+  </div>
 </section>
-
 <div class="subnav" role="navigation" aria-label="Secciones de esta página">
-  <a href="#historia">Historia</a>
-  <a href="#por-que">Por qué nosotros</a>
-  <a href="#mision">Misión y valores</a>
-  <a href="#proceso">Proceso</a>
-  <a href="#clientes">Clientes</a>
+  <a href="#historia">Historia</a><a href="#planta">Planta</a><a href="#por-que">Por qué nosotros</a><a href="#valores">Valores</a><a href="#clientes">Clientes</a>
 </div>
 
-<!-- INTRO -->
-<section class="section" id="historia">
-  <div class="intro-grid">
-    <div class="fade-in">
-      <div class="section-tag">Nuestra historia</div>
-      <h1 class="section-title">Tres generaciones <span>haciendo bolsa</span> en Cortazar</h1>
-      <p class="section-body">
-        En 1970 el abuelo de la familia instaló la primera extrusora en Cortazar, Guanajuato.
-        Las dos generaciones siguientes sumaron impresión y corte, y en 2014 la empresa tomó
-        su nombre actual, Plásticos Cortazarenses S.A. de C.V.
-      </p>
-      <p class="section-body">
-        Hoy surtimos a empacadoras de hortaliza del Bajío, a más de 35 marcas de hielo y a
-        fabricantes de invernadero y textil en todo el país. Más de cien clientes activos;
-        varios llevan más de diez años con nosotros.
-      </p>
-    </div>
-    <div class="fade-in" style="background: linear-gradient(135deg, var(--azul-medio), var(--azul-fuerte)); height: 380px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(61,143,212,0.2); position: relative; overflow: hidden;">
-      <div style="text-align: center; position: relative; z-index: 1;">
-        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 100px; font-weight: 700; color: rgba(61,143,212,0.1); line-height: 1;">1970</div>
-        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--azul-claro); margin-top: -12px;">año de fundación</div>
-      </div>
-      <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--azul-vivo), var(--azul-claro));"></div>
+<section class="seccion" id="historia">
+  <div class="split">
+    <figure class="media r-1x1 revelar" data-foto="img/historia.jpg
+Foto cuadrada 1:1 — foto antigua de la primera planta o del fundador. Si no hay, la planta actual."><img class="media-el" src="img/historia.jpg" alt="Historia de Plásticos Cortazarenses" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span></figure>
+    <div class="revelar">
+      <div class="eyebrow">Historia</div>
+      <h2>Tres generaciones, tres procesos</h2>
+      <p class="lead">En 1970 el abuelo de la familia empezó el negocio del plástico en Cortazar. Hoy la planta extruye, imprime y corta bajo un mismo techo.</p>
+      <ol class="tiempo">
+        <li><b>1970</b><span>Inicia el negocio en Cortazar.</span></li>
+        <li><b>2014</b><span>Nace Plásticos Cortazarenses S.A. de C.V.</span></li>
+        <li><b>Hoy</b><span>10 máquinas y más de 100 clientes activos.</span></li>
+      </ol>
     </div>
   </div>
 </section>
 
-<!-- POR QUÉ NOSOTROS -->
-<section class="section section-alt" id="por-que">
-  <div class="fade-in">
-    <div class="section-tag">Nuestra diferencia</div>
-    <h2 class="section-title">Lo que nos <span>distingue</span></h2>
+<section class="seccion seccion-gris" id="planta">
+  <div class="cabeza revelar"><div><div class="eyebrow">La planta</div><h2>Extrusión, impresión y corte</h2></div></div>
+  <div class="rejilla-3">
+    <article class="tarjeta revelar"><figure class="media r-4x3" data-foto="img/proceso-extrusion.jpg
+Foto 4:3 — extrusora: burbuja de película o rollo saliendo."><img class="media-el" src="img/proceso-extrusion.jpg" alt="Extrusión" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l6 4V9l6 4V5h6v16z"/><path d="M8 17h2M13 17h2M18 17h2"/></svg></span></figure><div class="tarjeta-txt"><h3>Extrusión · 3 líneas</h3><p>La resina se funde y se forma en película. Aquí se fija calibre, ancho y capas.</p></div></article>
+    <article class="tarjeta revelar"><figure class="media r-4x3" data-foto="img/proceso-impresion.jpg
+Foto 4:3 — máquina de flexografía imprimiendo, o rollo impreso de cerca."><img class="media-el" src="img/proceso-impresion.jpg" alt="Impresión" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg></span></figure><div class="tarjeta-txt"><h3>Impresión · 3 máquinas</h3><p>Flexografía hasta 6 colores con los pantones de cada cliente.</p></div></article>
+    <article class="tarjeta revelar"><figure class="media r-4x3" data-foto="img/proceso-corte.jpg
+Foto 4:3 — cortadora formando bolsas."><img class="media-el" src="img/proceso-corte.jpg" alt="Corte y acabado" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span></figure><div class="tarjeta-txt"><h3>Corte · 4 máquinas</h3><p>Corte a medida, troquel, fuelle y solapa. Cada lote se verifica antes de empacarse.</p></div></article>
   </div>
-  <div class="razones-grid">
-    <div class="razon-card fade-in">
-      <div class="razon-num">01</div>
-      <div>
-        <div class="razon-nombre">Atendemos urgencias</div>
-        <p class="razon-desc">Si tu empacadora se queda sin bolsa a media temporada, llámanos. Reacomodamos la programación de planta para sacar el pedido.</p>
-        <div class="razon-tag">Teléfono: 411 115 4776</div>
-      </div>
-    </div>
-    <div class="razon-card fade-in">
-      <div class="razon-num">02</div>
-      <div>
-        <div class="razon-nombre">56 años en el oficio</div>
-        <p class="razon-desc">Fabricamos bolsa para el campo desde 1970. Conocemos los calibres, medidas y resistencias que pide cada cultivo y cada presentación de hielo.</p>
-        <div class="razon-tag">Desde 1970</div>
-      </div>
-    </div>
-    <div class="razon-card fade-in">
-      <div class="razon-num">03</div>
-      <div>
-        <div class="razon-nombre">Impresión en la misma planta</div>
-        <p class="razon-desc">Tres máquinas de flexografía hasta 6 colores. La bolsa se extruye, se imprime y se corta aquí, sin pasar por un tercero.</p>
-        <div class="razon-tag">Hasta 6 colores</div>
-      </div>
-    </div>
-    <div class="razon-card fade-in">
-      <div class="razon-num">04</div>
-      <div>
-        <div class="razon-nombre">Control por lote</div>
-        <p class="razon-desc">Cada corrida queda registrada con fórmula, calibre y verificación antes de salir. Si un pedido presenta una desviación, sabemos de qué lote vino.</p>
-        <div class="razon-tag">Registro de cada corrida</div>
-      </div>
-    </div>
-    <div class="razon-card fade-in">
-      <div class="razon-num">05</div>
-      <div>
-        <div class="razon-nombre">200 productos activos</div>
-        <p class="razon-desc">Es probable que ya fabriquemos una bolsa parecida a la que necesitas. Partimos de esa especificación en lugar de empezar de cero.</p>
-        <div class="razon-tag">Catálogo por mercado</div>
-      </div>
-    </div>
-    <div class="razon-card fade-in">
-      <div class="razon-num">06</div>
-      <div>
-        <div class="razon-nombre">Entrega como te convenga</div>
-        <p class="razon-desc">Flota propia, transportista o paquetería. El tiempo de entrega se acuerda con cada cliente según su temporada.</p>
-        <div class="razon-tag">Flota propia</div>
-      </div>
-    </div>
+  <div class="cifras revelar" style="margin-top:80px">
+    <div class="cifra"><div class="cifra-num">25<small>+ ton</small></div><div class="cifra-txt">Polietileno procesado al mes.</div></div>
+    <div class="cifra"><div class="cifra-num">10</div><div class="cifra-txt">Máquinas en planta.</div></div>
+    <div class="cifra"><div class="cifra-num">6</div><div class="cifra-txt">Colores de impresión.</div></div>
+    <div class="cifra"><div class="cifra-num">3</div><div class="cifra-txt">Formas de entrega.</div></div>
   </div>
-
 </section>
 
-<!-- MISIÓN VISIÓN -->
-<section class="section section-alt" id="mision">
-  <div class="fade-in" style="margin-bottom: 48px;">
-    <div class="section-tag">Lo que nos mueve</div>
-    <h2 class="section-title">Misión, visión y <span>valores</span></h2>
+<section class="seccion seccion-navy" id="por-que">
+  <div class="cabeza revelar"><div><div class="eyebrow">Por qué nosotros</div><h2>Seis razones para comprarnos</h2></div></div>
+  <div class="rejilla-3">
+    <div class="razon revelar"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg><h3>Atendemos urgencias</h3><p>Si tu empacadora se queda sin bolsa a media temporada, llámanos y buscamos cómo sacar el pedido.</p></div>
+    <div class="razon revelar"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><h3>56 años en el oficio</h3><p>Conocemos los calibres y resistencias que pide cada cultivo y cada presentación de hielo.</p></div>
+    <div class="razon revelar"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg><h3>Impresión en casa</h3><p>Tres máquinas de flexografía. La bolsa no pasa por un tercero.</p></div>
+    <div class="razon revelar"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg><h3>Control por lote</h3><p>Cada corrida queda registrada con fórmula, calibre y verificación antes de salir.</p></div>
+    <div class="razon revelar"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-4-9 4 9 4 9-4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg><h3>200 productos activos</h3><p>Es probable que ya fabriquemos una bolsa parecida a la que necesitas.</p></div>
+    <div class="razon revelar"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><h3>Entrega como te convenga</h3><p>Flota propia, transportista o paquetería, según tu temporada.</p></div>
   </div>
-  <div class="mvv-grid">
-    <div class="mvv-card fade-in">
-      <span class="mvv-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span>
-      <div class="mvv-titulo">Misión</div>
-      <div class="mvv-linea"></div>
-      <div class="mvv-texto">Fabricar la bolsa que cada cliente necesita y entregarla a tiempo</div>
-      <p class="mvv-desc">En la medida, el calibre y la impresión que pide, con el mismo cuidado en un pedido chico que en uno grande.</p>
-    </div>
-    <div class="mvv-card fade-in">
-      <span class="mvv-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
-      <div class="mvv-titulo">Visión</div>
-      <div class="mvv-linea"></div>
-      <div class="mvv-texto">Crecer con nuestros clientes</div>
-      <p class="mvv-desc">Mejorar los procesos de planta cada año, y que ese crecimiento se note en el equipo y en Cortazar.</p>
-    </div>
-  </div>
-  <div class="valores-sub fade-in"><div class="section-tag">Lo que nos define</div></div>
-  <div class="valores-grid">
-    <div class="valor-card fade-in">
-      <span class="valor-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span>
-      <div class="valor-nombre">Lealtad</div>
-      <p class="valor-desc">Al cliente que nos compra en temporada alta y al que nos compra en temporada baja.</p>
-    </div>
-    <div class="valor-card fade-in">
-      <span class="valor-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
-      <div class="valor-nombre">Compromiso</div>
-      <p class="valor-desc">La fecha que damos es la fecha que entregamos.</p>
-    </div>
-    <div class="valor-card fade-in">
-      <span class="valor-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg></span>
-      <div class="valor-nombre">Responsabilidad</div>
-      <p class="valor-desc">Respondemos por cada lote que sale de la planta.</p>
-    </div>
-    <div class="valor-card fade-in">
-      <span class="valor-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V10"/><path d="M12 14c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 10c0-4 3-6 7-6 0 4-3 6-7 6z"/></svg></span>
-      <div class="valor-nombre">Compañerismo</div>
-      <p class="valor-desc">Los tres turnos trabajan como un solo equipo.</p>
+</section>
+
+<section class="seccion" id="valores">
+  <div class="split invertido">
+    <figure class="media r-4x3 revelar" data-foto="img/equipo.jpg
+Foto 4:3 — equipo de trabajo en planta, con uniforme y equipo de seguridad."><img class="media-el" src="img/equipo.jpg" alt="Equipo de trabajo" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg></span></figure>
+    <div class="revelar">
+      <div class="eyebrow">Misión y visión</div>
+      <h2>Fabricar la bolsa que cada cliente necesita y entregarla a tiempo</h2>
+      <p class="lead">Y crecer con nuestros clientes: mejorar los procesos de planta cada año, y que ese crecimiento se note en el equipo y en Cortazar.</p>
+      <ul class="datos">
+        <li><strong>Lealtad</strong><span>Al cliente de temporada alta y al de temporada baja.</span></li>
+        <li><strong>Compromiso</strong><span>La fecha que damos es la fecha que entregamos.</span></li>
+        <li><strong>Responsabilidad</strong><span>Respondemos por cada lote que sale de la planta.</span></li>
+        <li><strong>Compañerismo</strong><span>El equipo de planta trabaja como uno solo.</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
-
-<!-- PROCESO -->
-<section class="section" id="proceso">
-  <div class="fade-in">
-    <div class="section-tag">Cómo fabricamos</div>
-    <h2 class="section-title">Nuestro <span>proceso</span></h2>
+<section class="seccion seccion-gris" id="clientes">
+  <div class="cifras revelar" style="margin-bottom:80px">
+    <div class="cifra"><div class="cifra-num">100<small>+</small></div><div class="cifra-txt">Clientes activos.</div></div>
+    <div class="cifra"><div class="cifra-num">10<small>+ años</small></div><div class="cifra-txt">Con nuestros clientes más antiguos.</div></div>
+    <div class="cifra"><div class="cifra-num">35<small>+</small></div><div class="cifra-txt">Marcas de hielo.</div></div>
+    <div class="cifra"><div class="cifra-num">5</div><div class="cifra-txt">Sectores atendidos.</div></div>
   </div>
-  <div class="proceso-grid">
-    <div class="proceso-paso fade-in">
-      <div class="proceso-num">01</div>
-      <div class="proceso-nombre">Extrusión · 3 líneas</div>
-      <p class="proceso-desc">La resina se funde y se forma en película tubular o plana. Aquí se fija el calibre, el ancho y la composición de capas.</p>
-    </div>
-    <div class="proceso-paso fade-in">
-      <div class="proceso-num">02</div>
-      <div class="proceso-nombre">Impresión · 3 máquinas</div>
-      <p class="proceso-desc">Flexografía hasta 6 colores con los pantones de cada cliente. Las placas se conservan para reposiciones.</p>
-    </div>
-    <div class="proceso-paso fade-in">
-      <div class="proceso-num">03</div>
-      <div class="proceso-nombre">Corte y acabado · 4 máquinas</div>
-      <p class="proceso-desc">Corte a medida, troquel, fuelle y solapa según el pedido. Cada lote se verifica antes de empacarse.</p>
-    </div>
+  <div class="eyebrow revelar">Lo que dicen nuestros clientes</div>
+  <figure class="testimonio revelar">
+    <blockquote>Llevamos años trabajando con ellos. Cuando tenemos una urgencia, siempre responden.</blockquote>
+  </figure>
+  <div class="citas revelar">
+    <p>La calidad de impresión es consistente pedido a pedido.</p>
+    <p>Nos desarrollaron un empaque a la medida que ningún otro proveedor quiso hacer.</p>
+    <p>Trato directo, sin rodeos. Sabes con quién hablas y cuándo llega tu pedido.</p>
   </div>
-
-  <div class="fade-in" style="margin-top:56px; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:32px; border-top:1px solid rgba(61,143,212,0.2); padding-top:40px;">
-    <div>
-      <div style="font-family:'Barlow Condensed',sans-serif; font-size:44px; font-weight:700; color:var(--azul-claro); line-height:1;">25+</div>
-      <div class="proceso-nombre" style="margin-top:8px;">Toneladas al mes</div>
-      <p class="proceso-desc">Polietileno procesado entre los tres procesos.</p>
-    </div>
-    <div>
-      <div style="font-family:'Barlow Condensed',sans-serif; font-size:44px; font-weight:700; color:var(--azul-claro); line-height:1;">10</div>
-      <div class="proceso-nombre" style="margin-top:8px;">Máquinas en planta</div>
-      <p class="proceso-desc">3 de extrusión, 3 de impresión flexográfica y 4 de corte y acabado.</p>
-    </div>
-    <div>
-      <div style="font-family:'Barlow Condensed',sans-serif; font-size:44px; font-weight:700; color:var(--azul-claro); line-height:1;">3</div>
-      <div class="proceso-nombre" style="margin-top:8px;">Formas de entrega</div>
-      <p class="proceso-desc">Flota propia, transportista o paquetería, según el destino y la fecha.</p>
+</section>
+<section class="cierre">
+  <figure class="media" data-foto="img/cierre.jpg
+Foto horizontal amplia: rollos de película o bolsas apiladas en bodega, listas para embarque. Se oscurece encima, así que puede ser con mucho detalle."><img class="media-el" src="img/cierre.jpg" alt="" loading="lazy" decoding="async"></figure>
+  <div class="cierre-in revelar">
+    <h2>Pide una cotización</h2>
+    <p>Dinos producto, medida, cantidad y fecha. Respondemos en menos de 24 horas hábiles.</p>
+    <div class="hero-acciones">
+      <a href="contacto.html" class="btn btn-claro">Solicitar cotización</a>
+      <a href="tel:+524111154776" class="btn btn-borde"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg>Llamar 411 115 4776</a>
     </div>
   </div>
 </section>
-
-<!-- CLIENTES -->
-<section class="section section-alt" id="clientes">
-  <div class="fade-in">
-    <div class="section-tag">A quiénes servimos</div>
-    <h2 class="section-title">Clientes que <span>confían</span> en nosotros</h2>
-    <p class="section-body" style="max-width:640px;">No publicamos nombres de clientes sin su permiso. Sí publicamos cuántos son, cuánto llevan con nosotros y lo que dicen. Los sectores están en <a href="mercados.html" style="color:var(--azul-claro);">Mercados</a>.</p>
-  </div>
-  <div class="fade-in">
-      <div class="stats-row">
-        <div class="stat-box">
-          <div class="stat-num">100+</div>
-          <div class="stat-label">Clientes activos</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">10+</div>
-          <div class="stat-label">Años con clientes clave</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">5</div>
-          <div class="stat-label">Sectores atendidos</div>
-        </div>
-      </div>
-  </div>
-  <div class="section-tag fade-in">Lo que dicen</div>
-  <div class="testimonial-grid">
-    <div class="testi-card fade-in">
-      <p class="testi-texto">"Llevamos años con ellos. Cuando se nos atraviesa una urgencia, contestan el teléfono y sacan el pedido."</p>
-    </div>
-    <div class="testi-card fade-in">
-      <p class="testi-texto">"La impresión sale igual en cada pedido. Ya no la revisamos al recibirla."</p>
-    </div>
-    <div class="testi-card fade-in">
-      <p class="testi-texto">"Nos hicieron una bolsa a la medida que otros dos proveedores no quisieron fabricar."</p>
-    </div>
-    <div class="testi-card fade-in">
-      <p class="testi-texto">"Trato directo. Sabes con quién hablas y cuándo llega tu pedido."</p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-final">
-  <h2 class="cta-titulo">Pide una <span>cotización</span></h2>
-  <p class="cta-desc">Dinos producto, medida, cantidad y fecha. Respondemos en menos de 24 horas hábiles.</p>
-  <a href="contacto.html" class="btn-primary">Solicitar cotización</a>
-</section>
-
-<!-- FOOTER -->
 </main>
 <footer class="pie">
   <div class="pie-marca">
-    <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
+    <a href="index.html" class="nav-logo"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="8" fill="#0B1F3A"/><circle cx="20" cy="20" r="12" stroke="#8CC3EE" stroke-width="1.6"/><circle cx="20" cy="20" r="8" stroke="#2F80D0" stroke-width="1.2"/><text x="20" y="25.5" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="15" fill="#fff">P</text></svg><span class="nav-logo-text">Plásticos Cortazarenses<span>Empaques flexibles</span></span></a>
     <p>Fabricante de bolsa y película de polietileno en Cortazar, Guanajuato, desde 1970.</p>
   </div>
   <div>
     <div class="pie-titulo">Contacto</div>
-    <ul class="pie-lista">
-      <li><a class="tel-link" href="tel:+524111154776"><strong>411 115 4776</strong></a></li>
-      <li><span>Lunes a viernes · 8:00 – 18:00</span></li>
-      <li><span>Sábado · 8:00 – 13:00</span></li>
-      <li><span>Cortazar, Guanajuato, México</span></li>
+    <ul>
+      <li><a href="tel:+524111154776"><strong>411 115 4776</strong></a></li>
+      <li>Lunes a viernes · 8:00 – 18:00</li>
+      <li>Sábado · 8:00 – 13:00</li>
+      <li>Cortazar, Guanajuato</li>
+    </ul>
+  </div>
+  <div>
+    <div class="pie-titulo">Productos</div>
+    <ul>
+      <li><a href="productos.html#tipos">Tipos de bolsa y película</a></li>
+      <li><a href="productos.html#catalogo">Catálogo por mercado</a></li>
+      <li><a href="mercados.html">Mercados</a></li>
     </ul>
   </div>
   <div>
     <div class="pie-titulo">Empresa</div>
-    <ul class="pie-lista">
+    <ul>
       <li><a href="nosotros.html">Nosotros</a></li>
-      <li><a href="nosotros.html#por-que">¿Por qué nosotros?</a></li>
-      <li><a href="nosotros.html#clientes">Clientes</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </div>
-  <div>
-    <div class="pie-titulo">Qué fabricamos</div>
-    <ul class="pie-lista">
-      <li><a href="productos.html#tipos">Tipos de bolsa y película</a></li>
-      <li><a href="productos.html#catalogo">Catálogo por mercado</a></li>
-      <li><a href="mercados.html">Mercados</a></li>
+      <li><a href="nosotros.html#planta">La planta</a></li>
       <li><a href="contacto.html">Solicitar cotización</a></li>
     </ul>
   </div>
   <div class="pie-legal">
-    <span>© 2026 Plásticos Cortazarenses S.A. de C.V. · Todos los derechos reservados</span>
+    <span>© 2026 Plásticos Cortazarenses S.A. de C.V.</span>
     <a href="aviso-privacidad.html">Aviso de privacidad</a>
   </div>
 </footer>
-
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
-
 <div class="barra-movil" role="navigation" aria-label="Acciones rápidas">
-  <a class="bm-llamar" href="tel:+524111154776"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span>Llamar</span></a>
-  <a class="bm-cotizar" href="contacto.html">Solicitar cotización</a>
+  <a class="bm-llamar" href="tel:+524111154776"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span>Llamar</span></a>
+  <a class="bm-cotizar" href="contacto.html">Cotizar</a>
 </div>
-<script src="ux.js"></script>
+<script src="pc.js"></script>
 </body>
 </html>

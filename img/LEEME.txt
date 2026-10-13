@@ -1,0 +1,43 @@
+ESPACIOS PARA FOTOS Y VIDEOS — Plásticos Cortazarenses
+==============================================================
+
+Cómo funciona:
+  1. Guarda la foto o video en esta carpeta (img/) con EXACTAMENTE el nombre de la lista.
+  2. Doble clic en subir-a-github.cmd.
+  3. La foto aparece sola en su lugar. Si falta, se ve el fondo azul con un icono.
+
+Para ver en el sitio qué archivo va en cada espacio, agrega ?fotos=1 a la dirección:
+  https://pauloruizmen.github.io/plasticos-cortazarenses/?fotos=1
+
+Formato: fotos .jpg de 1600 px de ancho (encabezados: 2400 px), máximo 400 KB.
+Video .mp4 de 10–20 s, sin sonido, 1920×1080, máximo 8 MB.
+
+PRIMERO ESTAS (las que más se ven):
+  hero.mp4                 VIDEO de portada, horizontal, 10–20 s sin sonido: extrusora funcionando, burbuja de película subiendo, rollo girando. Si no hay video, poner hero.jpg (foto horizontal de planta).   [index]
+  hero.jpg                 Foto horizontal de la planta (2400 px). Se usa mientras no haya video de portada.   [index]
+  mercado-hortaliza.jpg    Foto 4:3 — bolsa con zanahoria o lechuga adentro, en caja de campo o en la línea de empaque.   [index, mercados, productos]
+  mercado-hielo.jpg        Foto 4:3 — bolsa de hielo impresa, llena, con escarcha. Sin que se lea la marca si no hay permiso.   [index, mercados, productos]
+  mercado-invernadero.jpg  Foto 4:3 — invernadero con película instalada, o bolsas de cultivo con planta.   [index, mercados, productos]
+  mercado-almohada.jpg     Foto 4:3 — almohada empacada en su bolsa, fondo limpio.   [index, mercados, productos]
+  planta.mp4               VIDEO 4:3 o 16:9, 10–20 s sin sonido: recorrido por las tres áreas. Mientras no haya video, se usa la foto planta.jpg.   [index]
+  planta.jpg               Foto 4:3 de la planta. Se usa mientras no haya planta.mp4.   [index]
+  proceso-impresion.jpg    Foto 4:3 — máquina de flexografía imprimiendo, o rollo impreso a varios colores de cerca.   [index, nosotros]
+  cierre.jpg               Foto horizontal amplia: rollos de película o bolsas apiladas en bodega, listas para embarque. Se oscurece encima, así que puede ser con mucho detalle.   [index, mercados, nosotros, productos]
+
+DESPUÉS:
+  catalogo-stock.jpg       Foto 4:3 — producto del segmento en existencia, sin marcas de clientes visibles.   [productos]
+  contacto-hero.jpg        Foto horizontal (2400 px) — bodega con producto terminado o camión de la flota cargando. Se oscurece encima.   [contacto]
+  equipo.jpg               Foto 4:3 — equipo de trabajo en planta, con uniforme y equipo de seguridad.   [nosotros]
+  historia.jpg             Foto cuadrada 1:1 — foto antigua de la primera planta o del fundador. Si no hay, la planta actual.   [nosotros]
+  mercado-industrial.jpg   Foto 16:9 — bolsas industriales apiladas o en tarima.   [mercados, productos]
+  mercados-hero.jpg        Foto horizontal amplia (2400 px) — campo de hortaliza o línea de empaque con bolsas. Se oscurece encima.   [mercados]
+  nosotros-hero.jpg        Foto horizontal amplia (2400 px) — fachada de la planta, o el equipo frente a la planta. Se oscurece encima.   [nosotros]
+  proceso-corte.jpg        Foto 4:3 — cortadora formando bolsas.   [nosotros]
+  proceso-extrusion.jpg    Foto 4:3 — extrusora: burbuja de película o rollo saliendo.   [nosotros]
+  producto-fuelle.jpg      Foto 4:3 — bolsa con fuelle abierta, vista de lado.   [index, productos]
+  producto-impresa.jpg     Foto 4:3 — detalle de bolsa impresa a varios colores.   [index, productos]
+  producto-medida.jpg      Foto 4:3 — muestra o prototipo sobre la mesa de control de calidad.   [index, productos]
+  producto-rollo.jpg       Foto 4:3 — rollo de película recién salido de extrusión, de cerca.   [index, productos]
+  producto-troquel.jpg     Foto 4:3 — bolsa con asa troquelada.   [index, productos]
+  producto-tubular.jpg     Foto 4:3 — bolsa tubular natural o naranja, sobre fondo neutro.   [index, productos]
+  productos-hero.jpg       Foto horizontal amplia (2400 px) — mesa con varias bolsas distintas: tubular, impresa, con fuelle, rollo. Se oscurece encima.   [productos]

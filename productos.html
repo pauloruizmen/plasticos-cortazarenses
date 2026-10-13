@@ -7,7 +7,7 @@
 <title>Productos | Plásticos Cortazarenses</title>
 <meta name="description" content="Bolsa tubular, película en rollo, bolsa impresa hasta 6 colores, con troquel o fuelle. Catálogo de más de 200 productos por mercado. Fabricado en Cortazar, Guanajuato.">
 <link rel="canonical" href="https://pauloruizmen.github.io/plasticos-cortazarenses/productos.html">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%230a1628%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-family=%22Arial,sans-serif%22 font-size=%2232%22 font-weight=%22bold%22 fill=%22%233d8fd4%22 text-anchor=%22middle%22%3EPC%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%230B1F3A%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-family=%22Arial,sans-serif%22 font-size=%2232%22 font-weight=%22bold%22 fill=%22%238CC3EE%22 text-anchor=%22middle%22%3EPC%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Plásticos Cortazarenses">
 <meta property="og:locale" content="es_MX">
@@ -18,477 +18,166 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pauloruizmen.github.io/plasticos-cortazarenses/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-  /* ── FILTROS DE SEGMENTO ── */
-  .filtros {
-    display: flex; gap: 8px; flex-wrap: wrap;
-    margin-bottom: 48px;
-  }
-  .filtro-btn {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 12px; font-weight: 600;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--gris-texto);
-    background: transparent;
-    border: 1px solid rgba(61,143,212,0.2);
-    padding: 8px 20px; cursor: pointer;
-    transition: all 0.2s;
-  }
-  .filtro-btn:hover, .filtro-btn.activo {
-    background: var(--azul-vivo);
-    border-color: var(--azul-vivo);
-    color: var(--blanco);
-  }
-
-  /* ── SEGMENTO ── */
-  .segmento { margin-bottom: 72px; }
-  .segmento-header {
-    display: flex; align-items: center; gap: 16px;
-    margin-bottom: 32px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid rgba(61,143,212,0.15);
-  }
-  .segmento-icono { font-size: 28px; }
-  .segmento-nombre {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 28px; font-weight: 700;
-    text-transform: uppercase; color: var(--blanco);
-  }
-  .segmento-count {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 12px; font-weight: 600;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--azul-claro);
-    background: rgba(29,106,184,0.15);
-    border: 1px solid rgba(61,143,212,0.2);
-    padding: 4px 12px;
-    margin-left: auto;
-  }
-
-  /* ── IMAGEN DE SEGMENTO ── */
-  .segmento-visual {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 32px;
-    align-items: start;
-  }
-  .segmento-img {
-    background: linear-gradient(135deg, var(--azul-medio), var(--azul-fuerte));
-    border: 1px solid rgba(61,143,212,0.2);
-    height: 200px;
-    display: flex; align-items: center; justify-content: center;
-    flex-direction: column; gap: 12px;
-    position: relative; overflow: hidden;
-  }
-  .segmento-img-icono { font-size: 48px; }
-  .segmento-img-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px; font-weight: 600;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--azul-claro);
-  }
-  .segmento-img-bar {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--azul-vivo), var(--azul-claro));
-  }
-
-  /* ── PRODUCTOS GRID ── */
-  .productos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-  }
-  .producto-item {
-    background: var(--azul-medio);
-    border: 1px solid rgba(61,143,212,0.08);
-    padding: 20px 24px;
-    transition: border-color 0.2s, background 0.2s;
-  }
-  .producto-item:hover {
-    border-color: rgba(61,143,212,0.35);
-    background: rgba(29,106,184,0.15);
-  }
-  .producto-codigo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 10px; font-weight: 600;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--azul-claro); margin-bottom: 6px;
-  }
-  .producto-nombre {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 15px; font-weight: 600;
-    text-transform: uppercase; color: var(--blanco);
-    line-height: 1.2;
-  }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    .segmento-visual { grid-template-columns: 1fr; }
-    .productos-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 600px) {
-    .productos-grid { grid-template-columns: 1fr; }
-  }
-  .soluciones-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 2px; margin-top: 48px;
-  }
-  .solucion-card {
-    background: var(--azul-medio);
-    border: 1px solid rgba(61,143,212,0.1);
-    padding: 44px 36px;
-    transition: border-color 0.2s, background 0.2s;
-  }
-  .solucion-card:hover { border-color: rgba(61,143,212,0.4); background: rgba(29,106,184,0.15); }
-  .sol-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.15em;
-    text-transform: uppercase; color: rgba(61,143,212,0.4); margin-bottom: 16px;
-  }
-  .sol-nombre {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 24px; font-weight: 700; text-transform: uppercase;
-    color: var(--blanco); margin-bottom: 14px; line-height: 1.1;
-  }
-  .sol-desc { font-size: 14px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.55); }
-  .sol-linea { width: 36px; height: 2px; background: var(--azul-claro); margin-top: 24px; }
-  @media (max-width: 900px) {
-    .soluciones-grid, .proceso-steps { grid-template-columns: 1fr; }
-    }
-
-  .subnav {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    padding: 20px 60px; background: var(--azul-oscuro);
-    border-bottom: 1px solid rgba(61,143,212,0.12);
-  }
-  .subnav a {
-    font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600;
-    letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
-    color: var(--gris-texto); border: 1px solid rgba(61,143,212,0.2);
-    padding: 8px 18px; transition: all 0.2s;
-  }
-  .subnav a:hover { color: var(--blanco); border-color: var(--azul-claro); }
-  @media (max-width: 900px) { .subnav { padding: 16px 24px; } }
-</style>
-<link rel="stylesheet" href="ux.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pc.css">
 </head>
 <body>
 <a class="skip-link" href="#contenido">Ir al contenido</a>
-
-<!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo">
-    <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
-      <rect x="1" y="1" width="36" height="36" rx="8" fill="rgba(29,106,184,0.15)" stroke="rgba(61,143,212,0.5)" stroke-width="1"/>
-      <circle cx="19" cy="19" r="13" stroke="#3d8fd4" stroke-width="1.5" fill="none"/>
-      <circle cx="19" cy="19" r="9" stroke="#1d6ab8" stroke-width="1" fill="none"/>
-      <text x="19" y="24" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="15" fill="#72b8e8">P</text>
-    </svg>
-    <div class="nav-logo-text">Plásticos Cortazarenses<span>Empaques Flexibles</span></div>
-  </a>
+<nav class="site-nav" aria-label="Principal">
+  <a href="index.html" class="nav-logo" aria-label="Plásticos Cortazarenses, inicio"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="8" fill="#0B1F3A"/><circle cx="20" cy="20" r="12" stroke="#8CC3EE" stroke-width="1.6"/><circle cx="20" cy="20" r="8" stroke="#2F80D0" stroke-width="1.2"/><text x="20" y="25.5" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="15" fill="#fff">P</text></svg><span class="nav-logo-text">Plásticos Cortazarenses<span>Empaques flexibles</span></span></a>
   <ul class="nav-links">
     <li><a href="productos.html" class="activo" aria-current="page">Productos</a></li>
     <li><a href="mercados.html">Mercados</a></li>
     <li><a href="nosotros.html">Nosotros</a></li>
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
-  <a class="nav-tel" href="tel:+524111154776" aria-label="Llamar al 411 115 4776"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span>411 115 4776</span></a>
+  <a class="nav-tel" href="tel:+524111154776"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg>411 115 4776</a>
   <a href="contacto.html" class="nav-cta">Solicitar cotización</a>
 </nav>
 <main id="contenido">
-
-<!-- BREADCRUMB -->
-<div class="page-header">
-  <a href="index.html" class="breadcrumb-link">Inicio</a>
-  <span class="breadcrumb-sep">›</span>
-  <span class="breadcrumb-current">Productos</span>
-</div>
-
+<section class="pagina-hero">
+  <figure class="media" data-foto="img/productos-hero.jpg
+Foto horizontal amplia (2400 px) — mesa con varias bolsas distintas: tubular, impresa, con fuelle, rollo. Se oscurece encima."><img class="media-el" src="img/productos-hero.jpg" alt="" loading="lazy" decoding="async"></figure>
+  <div class="pagina-hero-in">
+    <div class="migas"><a href="index.html">Inicio</a><span>/</span><span>Productos</span></div>
+    <div class="eyebrow">Qué fabricamos</div>
+    <h1>Productos</h1>
+    <p>Seis tipos de bolsa y película, en el calibre, medida, color e impresión que especifiques.</p>
+  </div>
+</section>
 <div class="subnav" role="navigation" aria-label="Secciones de esta página">
-  <a href="#tipos">Tipos de bolsa y película</a>
+  <a href="#tipos">Tipos de bolsa</a>
   <a href="#catalogo">Catálogo por mercado</a>
 </div>
 
-<section class="section" id="tipos">
-  <div class="section-tag">Qué fabricamos</div>
-  <h1 class="section-title">Nuestros <span>productos</span></h1>
-  <p class="section-body" style="max-width:640px;">Seis tipos de bolsa y película, en el calibre, medida, color e impresión que especifiques. Más abajo está el <a href="#catalogo" style="color:var(--azul-claro);">catálogo por mercado</a>.</p>
-  <div class="soluciones-grid">
-    <div class="solucion-card fade-in" id="tubular">
-      <div class="sol-num">01</div>
-      <div class="sol-nombre">Bolsas tubulares</div>
-      <p class="sol-desc">Monocapa o coextrusión bicapa. Con o sin tratamiento corona. Calibre, ancho y color a especificación.</p>
-      <div class="sol-linea"></div>
-    </div>
-    <div class="solucion-card fade-in" id="rollo">
-      <div class="sol-num">02</div>
-      <div class="sol-nombre">Película en rollo</div>
-      <p class="sol-desc">Plana o tubular. Para empacadora automática, invernadero e industria.</p>
-      <div class="sol-linea"></div>
-    </div>
-    <div class="solucion-card fade-in" id="impresa">
-      <div class="sol-num">03</div>
-      <div class="sol-nombre">Bolsas impresas</div>
-      <p class="sol-desc">Flexografía hasta 6 colores con los pantones del cliente. Conservamos las placas para reposiciones.</p>
-      <div class="sol-linea"></div>
-    </div>
-    <div class="solucion-card fade-in" id="troquel">
-      <div class="sol-num">04</div>
-      <div class="sol-nombre">Bolsas con troquel</div>
-      <p class="sol-desc">Asas, perforaciones o formas a diseño para bolsa de presentación.</p>
-      <div class="sol-linea"></div>
-    </div>
-    <div class="solucion-card fade-in" id="fuelle">
-      <div class="sol-num">05</div>
-      <div class="sol-nombre">Bolsas con fuelle</div>
-      <p class="sol-desc">Fuelle lateral o de fondo para producto pesado o voluminoso.</p>
-      <div class="sol-linea"></div>
-    </div>
-    <div class="solucion-card fade-in" id="medida">
-      <div class="sol-num">06</div>
-      <div class="sol-nombre">Desarrollo a medida</div>
-      <p class="sol-desc">Fórmula, calibre y diseño nuevos cuando ninguna bolsa del catálogo sirve. Se hace una muestra antes de la corrida.</p>
-      <div class="sol-linea"></div>
-    </div>
+<section class="seccion" id="tipos">
+  <div class="cabeza revelar"><div><div class="eyebrow">Tipos de bolsa y película</div><h2>Seis formas de empacar</h2></div></div>
+  <div class="rejilla-3">
+    <article class="tarjeta revelar" id="tubular"><figure class="media r-4x3" data-foto="img/producto-tubular.jpg
+Foto 4:3 — bolsa tubular natural o naranja, sobre fondo neutro."><img class="media-el" src="img/producto-tubular.jpg" alt="Bolsa tubular" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-4-9 4 9 4 9-4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg></span></figure><div class="tarjeta-txt"><h3>Bolsa tubular</h3><p>Monocapa o coextrusión bicapa. Con o sin tratamiento corona.</p></div></article>
+    <article class="tarjeta revelar" id="rollo"><figure class="media r-4x3" data-foto="img/producto-rollo.jpg
+Foto 4:3 — rollo de película recién salido de extrusión, de cerca."><img class="media-el" src="img/producto-rollo.jpg" alt="Película en rollo" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l6 4V9l6 4V5h6v16z"/><path d="M8 17h2M13 17h2M18 17h2"/></svg></span></figure><div class="tarjeta-txt"><h3>Película en rollo</h3><p>Plana o tubular, para empacadora automática e invernadero.</p></div></article>
+    <article class="tarjeta revelar" id="impresa"><figure class="media r-4x3" data-foto="img/producto-impresa.jpg
+Foto 4:3 — detalle de bolsa impresa a varios colores."><img class="media-el" src="img/producto-impresa.jpg" alt="Bolsa impresa" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg></span></figure><div class="tarjeta-txt"><h3>Bolsa impresa</h3><p>Flexografía hasta 6 colores con los pantones de tu marca.</p></div></article>
+    <article class="tarjeta revelar" id="troquel"><figure class="media r-4x3" data-foto="img/producto-troquel.jpg
+Foto 4:3 — bolsa con asa troquelada."><img class="media-el" src="img/producto-troquel.jpg" alt="Bolsa con troquel" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span></figure><div class="tarjeta-txt"><h3>Bolsa con troquel</h3><p>Asas, perforaciones o formas a diseño.</p></div></article>
+    <article class="tarjeta revelar" id="fuelle"><figure class="media r-4x3" data-foto="img/producto-fuelle.jpg
+Foto 4:3 — bolsa con fuelle abierta, vista de lado."><img class="media-el" src="img/producto-fuelle.jpg" alt="Bolsa con fuelle" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-4-9 4 9 4 9-4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg></span></figure><div class="tarjeta-txt"><h3>Bolsa con fuelle</h3><p>Fuelle lateral o de fondo para producto pesado.</p></div></article>
+    <article class="tarjeta revelar" id="medida"><figure class="media r-4x3" data-foto="img/producto-medida.jpg
+Foto 4:3 — muestra o prototipo sobre la mesa de control de calidad."><img class="media-el" src="img/producto-medida.jpg" alt="Desarrollo a medida" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg></span></figure><div class="tarjeta-txt"><h3>Desarrollo a medida</h3><p>Fórmula, calibre y diseño nuevos cuando ninguna bolsa sirve.</p></div></article>
   </div>
 </section>
 
-<!-- CONTENIDO -->
-<section class="section section-alt" id="catalogo">
-  <div class="section-tag">Catálogo</div>
-  <h2 class="section-title" style="margin-bottom:8px;">Por <span>mercado</span></h2>
-  <p class="section-body" style="max-width:600px; margin-bottom:40px;">
-    Más de 200 productos activos, ordenados por el mercado al que van. Si tu medida no está, la fabricamos.
-  </p>
-
-  <!-- Filtros -->
-  <div class="filtros">
-    <button class="filtro-btn activo" onclick="filtrar('todos', this)">Todos</button>
-    <button class="filtro-btn" onclick="filtrar('hortalizas', this)">Hortalizas</button>
-    <button class="filtro-btn" onclick="filtrar('hielo', this)">Hielo</button>
-    <button class="filtro-btn" onclick="filtrar('invernadero', this)">Invernadero</button>
-    <button class="filtro-btn" onclick="filtrar('almohadas', this)">Almohadas</button>
-    <button class="filtro-btn" onclick="filtrar('industrial', this)">Industrial</button>
-    <button class="filtro-btn" onclick="filtrar('stock', this)">Stock</button>
+<section class="seccion seccion-gris" id="catalogo">
+  <div class="cabeza revelar">
+    <div><div class="eyebrow">Catálogo</div><h2>Por mercado</h2><p class="lead">Más de 200 productos activos. Si tu medida no está, la fabricamos.</p></div>
   </div>
-
-  <!-- HORTALIZAS -->
-  <div class="segmento fade-in" data-seg="hortalizas">
-    <div class="segmento-header">
-      <span class="segmento-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-7 3-13 14-15 .5 8-3 14-11 14"/><path d="M4 20l8-8"/></svg></span>
-      <span class="segmento-nombre">Hortalizas y verduras</span>
-      <span class="segmento-count">Zanahoria · Lechuga · Apio · Espinaca</span>
-    </div>
-    <div class="segmento-visual">
-      <div class="segmento-img">
-        <span class="segmento-img-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-7 3-13 14-15 .5 8-3 14-11 14"/><path d="M4 20l8-8"/></svg></span>
-        <span class="segmento-img-label">Empaque para campo</span>
-        <div class="segmento-img-bar"></div>
-      </div>
-      <div class="productos-grid">
-        <div class="producto-item"><div class="producto-codigo">Natural · Naranja</div><div class="producto-nombre">Bolsa tubular para zanahoria</div></div>
-        <div class="producto-item"><div class="producto-codigo">1 a 5 lb</div><div class="producto-nombre">Presentaciones en libras para exportación</div></div>
-        <div class="producto-item"><div class="producto-codigo">Lechuga · Apio</div><div class="producto-nombre">Bolsa para hoja y tallo</div></div>
-        <div class="producto-item"><div class="producto-codigo">Hasta 6 colores</div><div class="producto-nombre">Bolsa impresa con la marca del productor</div></div>
-        <div class="producto-item"><div class="producto-codigo">En rollo</div><div class="producto-nombre">Película para empacadora automática</div></div>
-        <div class="producto-item"><div class="producto-codigo">A especificación</div><div class="producto-nombre">Medida y calibre según tu línea de empaque</div></div>
-      </div>
+  <div class="filtros" role="group" aria-label="Filtrar catálogo">
+    <button class="filtro activo" data-filtro="todos" aria-pressed="true">Todos</button>
+    <button class="filtro" data-filtro="hortalizas" aria-pressed="false">Hortalizas</button>
+    <button class="filtro" data-filtro="hielo" aria-pressed="false">Hielo</button>
+    <button class="filtro" data-filtro="invernadero" aria-pressed="false">Invernadero</button>
+    <button class="filtro" data-filtro="almohadas" aria-pressed="false">Almohadas</button>
+    <button class="filtro" data-filtro="industrial" aria-pressed="false">Industrial</button>
+    <button class="filtro" data-filtro="stock" aria-pressed="false">En existencia</button>
+  </div>
+  <div class="segmento revelar" data-seg="hortalizas">
+    <figure class="media r-4x3" data-foto="img/mercado-hortaliza.jpg
+Foto 4:3 — producto del segmento hortalizas y verduras, sin marcas de clientes visibles."><img class="media-el" src="img/mercado-hortaliza.jpg" alt="Hortalizas y verduras" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-7 3-13 14-15 .5 8-3 14-11 14"/><path d="M4 20l8-8"/></svg></span></figure>
+    <div><h3>Hortalizas y verduras</h3><p class="segmento-sub">Zanahoria · lechuga · apio · espinaca</p>
+      <ul class="specs"><li><b>Bolsa tubular</b><span>Natural o naranja, para zanahoria</span></li><li><b>Presentaciones</b><span>1 a 5 lb para exportación</span></li><li><b>Hoja y tallo</b><span>Bolsa para lechuga y apio</span></li><li><b>Impresa</b><span>Hasta 6 colores con tu marca</span></li><li><b>En rollo</b><span>Película para empacadora automática</span></li><li><b>A especificación</b><span>Medida y calibre según tu línea</span></li></ul>
     </div>
   </div>
-
-  <!-- HIELO -->
-  <div class="segmento fade-in" data-seg="hielo">
-    <div class="segmento-header">
-      <span class="segmento-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/><path d="M12 2l-2.5 2.5M12 2l2.5 2.5M12 22l-2.5-2.5M12 22l2.5-2.5M2 12l2.5-2.5M2 12l2.5 2.5M22 12l-2.5-2.5M22 12l-2.5 2.5"/></svg></span>
-      <span class="segmento-nombre">Hielo</span>
-      <span class="segmento-count">+35 marcas atendidas</span>
-    </div>
-    <div class="segmento-visual">
-      <div class="segmento-img">
-        <span class="segmento-img-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/><path d="M12 2l-2.5 2.5M12 2l2.5 2.5M12 22l-2.5-2.5M12 22l2.5-2.5M2 12l2.5-2.5M2 12l2.5 2.5M22 12l-2.5-2.5M22 12l-2.5 2.5"/></svg></span>
-        <span class="segmento-img-label">Bolsas para hielo</span>
-        <div class="segmento-img-bar"></div>
-      </div>
-      <div class="productos-grid">
-        <div class="producto-item"><div class="producto-codigo">1.5 · 3 · 5 · 15 kg</div><div class="producto-nombre">Bolsa para hielo en presentaciones estándar</div></div>
-        <div class="producto-item"><div class="producto-codigo">2.5 · 10 kg</div><div class="producto-nombre">Presentaciones intermedias a pedido</div></div>
-        <div class="producto-item"><div class="producto-codigo">Azul · Natural</div><div class="producto-nombre">Película en color o transparente</div></div>
-        <div class="producto-item"><div class="producto-codigo">Hasta 6 colores</div><div class="producto-nombre">Impresión con la marca de tu hielo</div></div>
-        <div class="producto-item"><div class="producto-codigo">Fuelle · Solapa</div><div class="producto-nombre">Bolsa con fuelle y solapa de cierre</div></div>
-        <div class="producto-item"><div class="producto-codigo">+35 marcas</div><div class="producto-nombre">Marcas de hielo atendidas en todo México</div></div>
-      </div>
+  <div class="segmento revelar" data-seg="hielo">
+    <figure class="media r-4x3" data-foto="img/mercado-hielo.jpg
+Foto 4:3 — producto del segmento hielo, sin marcas de clientes visibles."><img class="media-el" src="img/mercado-hielo.jpg" alt="Hielo" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/><path d="M12 2l-2.5 2.5M12 2l2.5 2.5M12 22l-2.5-2.5M12 22l2.5-2.5M2 12l2.5-2.5M2 12l2.5 2.5M22 12l-2.5-2.5M22 12l-2.5 2.5"/></svg></span></figure>
+    <div><h3>Hielo</h3><p class="segmento-sub">Más de 35 marcas atendidas</p>
+      <ul class="specs"><li><b>Estándar</b><span>1.5 · 3 · 5 · 15 kg</span></li><li><b>A pedido</b><span>2.5 y 10 kg</span></li><li><b>Color</b><span>Azul o natural</span></li><li><b>Impresa</b><span>Con la marca de tu hielo</span></li><li><b>Cierre</b><span>Fuelle y solapa</span></li></ul>
     </div>
   </div>
-
-  <!-- INVERNADERO -->
-  <div class="segmento fade-in" data-seg="invernadero">
-    <div class="segmento-header">
-      <span class="segmento-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V10"/><path d="M12 14c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 10c0-4 3-6 7-6 0 4-3 6-7 6z"/></svg></span>
-      <span class="segmento-nombre">Invernadero y agricultura</span>
-      <span class="segmento-count">Rollos · Películas · Bolsas de cultivo</span>
-    </div>
-    <div class="segmento-visual">
-      <div class="segmento-img">
-        <span class="segmento-img-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V10"/><path d="M12 14c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 10c0-4 3-6 7-6 0 4-3 6-7 6z"/></svg></span>
-        <span class="segmento-img-label">Plástico para invernadero</span>
-        <div class="segmento-img-bar"></div>
-      </div>
-      <div class="productos-grid">
-        <div class="producto-item"><div class="producto-codigo">Blanco / Negro</div><div class="producto-nombre">Bolsa de cultivo blanco por fuera, negro por dentro</div></div>
-        <div class="producto-item"><div class="producto-codigo">Con UV</div><div class="producto-nombre">Rollo blanco con inhibidor UV</div></div>
-        <div class="producto-item"><div class="producto-codigo">Blanco / Negro</div><div class="producto-nombre">Rollos y películas bicapa</div></div>
-        <div class="producto-item"><div class="producto-codigo">Pigmentada</div><div class="producto-nombre">Bolsa pigmentada blanco/negro</div></div>
-        <div class="producto-item"><div class="producto-codigo">Varios litros</div><div class="producto-nombre">Bolsa de cultivo en distintas capacidades</div></div>
-        <div class="producto-item"><div class="producto-codigo">Ancho · Largo</div><div class="producto-nombre">Rollo a la medida de tu invernadero</div></div>
-      </div>
+  <div class="segmento revelar" data-seg="invernadero">
+    <figure class="media r-4x3" data-foto="img/mercado-invernadero.jpg
+Foto 4:3 — producto del segmento invernadero y agricultura, sin marcas de clientes visibles."><img class="media-el" src="img/mercado-invernadero.jpg" alt="Invernadero y agricultura" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V10"/><path d="M12 14c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 10c0-4 3-6 7-6 0 4-3 6-7 6z"/></svg></span></figure>
+    <div><h3>Invernadero y agricultura</h3><p class="segmento-sub">Rollos · películas · bolsas de cultivo</p>
+      <ul class="specs"><li><b>Bolsa de cultivo</b><span>Blanco por fuera, negro por dentro</span></li><li><b>Rollo con UV</b><span>Blanco con inhibidor UV</span></li><li><b>Película bicapa</b><span>Blanco/negro</span></li><li><b>Pigmentada</b><span>Bolsa blanco/negro</span></li><li><b>Capacidad</b><span>Varios litros</span></li><li><b>A medida</b><span>Ancho y largo de tu invernadero</span></li></ul>
     </div>
   </div>
-
-  <!-- ALMOHADAS -->
-  <div class="segmento fade-in" data-seg="almohadas">
-    <div class="segmento-header">
-      <span class="segmento-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10"/><path d="M3 13h18"/><path d="M7 13V9.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1V13"/><path d="M3 18v2M21 18v2"/></svg></span>
-      <span class="segmento-nombre">Almohadas y textil</span>
-      <span class="segmento-count">Bolsas de presentación</span>
-    </div>
-    <div class="segmento-visual">
-      <div class="segmento-img">
-        <span class="segmento-img-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10"/><path d="M3 13h18"/><path d="M7 13V9.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1V13"/><path d="M3 18v2M21 18v2"/></svg></span>
-        <span class="segmento-img-label">Empaque para almohadas</span>
-        <div class="segmento-img-bar"></div>
-      </div>
-      <div class="productos-grid">
-        <div class="producto-item"><div class="producto-codigo">Básica · Ortopédica · Acolchada</div><div class="producto-nombre">Bolsa de presentación por línea de producto</div></div>
-        <div class="producto-item"><div class="producto-codigo">Impresa · Natural</div><div class="producto-nombre">Con impresión o transparente sin impresión</div></div>
-        <div class="producto-item"><div class="producto-codigo">Retail</div><div class="producto-nombre">Cumple especificación de cadenas de autoservicio</div></div>
-        <div class="producto-item"><div class="producto-codigo">A especificación</div><div class="producto-nombre">Medida según la almohada o el juego de cama</div></div>
-      </div>
+  <div class="segmento revelar" data-seg="almohadas">
+    <figure class="media r-4x3" data-foto="img/mercado-almohada.jpg
+Foto 4:3 — producto del segmento almohadas y textil, sin marcas de clientes visibles."><img class="media-el" src="img/mercado-almohada.jpg" alt="Almohadas y textil" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10"/><path d="M3 13h18"/><path d="M7 13V9.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1V13"/><path d="M3 18v2M21 18v2"/></svg></span></figure>
+    <div><h3>Almohadas y textil</h3><p class="segmento-sub">Bolsa de presentación</p>
+      <ul class="specs"><li><b>Líneas</b><span>Básica, ortopédica y acolchada</span></li><li><b>Acabado</b><span>Impresa o transparente</span></li><li><b>Retail</b><span>Especificación de autoservicio</span></li><li><b>Medida</b><span>Según almohada o juego de cama</span></li></ul>
     </div>
   </div>
-
-  <!-- INDUSTRIAL -->
-  <div class="segmento fade-in" data-seg="industrial">
-    <div class="segmento-header">
-      <span class="segmento-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l6 4V9l6 4V5h6v16z"/><path d="M8 17h2M13 17h2M18 17h2"/></svg></span>
-      <span class="segmento-nombre">Industrial y especial</span>
-      <span class="segmento-count">Asfalto · Laboratorio · Sal · Pozole</span>
-    </div>
-    <div class="segmento-visual">
-      <div class="segmento-img">
-        <span class="segmento-img-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l6 4V9l6 4V5h6v16z"/><path d="M8 17h2M13 17h2M18 17h2"/></svg></span>
-        <span class="segmento-img-label">Empaque industrial</span>
-        <div class="segmento-img-bar"></div>
-      </div>
-      <div class="productos-grid">
-        <div class="producto-item"><div class="producto-codigo">45×60 · 50×60 · C-550/600</div><div class="producto-nombre">Bolsa para asfalto</div></div>
-        <div class="producto-item"><div class="producto-codigo">Laboratorio</div><div class="producto-nombre">Bolsa para químicos y sulfatos</div></div>
-        <div class="producto-item"><div class="producto-codigo">Sal mineral</div><div class="producto-nombre">Bolsa para sal y suplemento de ganado</div></div>
-        <div class="producto-item"><div class="producto-codigo">Alimentos</div><div class="producto-nombre">Bolsa para maíz pozolero</div></div>
-        <div class="producto-item"><div class="producto-codigo">Negra · Blanco/Negro</div><div class="producto-nombre">Bolsa industrial de uso general</div></div>
-        <div class="producto-item"><div class="producto-codigo">Suaje boutique</div><div class="producto-nombre">Bolsa promocional con asa troquelada</div></div>
-      </div>
+  <div class="segmento revelar" data-seg="industrial">
+    <figure class="media r-4x3" data-foto="img/mercado-industrial.jpg
+Foto 4:3 — producto del segmento industrial y especial, sin marcas de clientes visibles."><img class="media-el" src="img/mercado-industrial.jpg" alt="Industrial y especial" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l6 4V9l6 4V5h6v16z"/><path d="M8 17h2M13 17h2M18 17h2"/></svg></span></figure>
+    <div><h3>Industrial y especial</h3><p class="segmento-sub">Asfalto · laboratorio · sal · alimentos</p>
+      <ul class="specs"><li><b>Asfalto</b><span>45×60 y 50×60 · C-550/600</span></li><li><b>Laboratorio</b><span>Químicos y sulfatos</span></li><li><b>Sal mineral</b><span>Sal y suplemento de ganado</span></li><li><b>Alimentos</b><span>Maíz pozolero</span></li><li><b>Uso general</b><span>Negra o blanco/negro</span></li><li><b>Promocional</b><span>Asa troquelada</span></li></ul>
     </div>
   </div>
-
-  <!-- STOCK -->
-  <div class="segmento fade-in" data-seg="stock">
-    <div class="segmento-header">
-      <span class="segmento-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-4-9 4 9 4 9-4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg></span>
-      <span class="segmento-nombre">Productos en stock</span>
-      <span class="segmento-count">Disponibilidad inmediata</span>
-    </div>
-    <div class="segmento-visual">
-      <div class="segmento-img">
-        <span class="segmento-img-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-4-9 4 9 4 9-4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg></span>
-        <span class="segmento-img-label">Entrega inmediata</span>
-        <div class="segmento-img-bar"></div>
-      </div>
-      <div class="productos-grid">
-        <div class="producto-item"><div class="producto-codigo">28×95 · Naranja</div><div class="producto-nombre">Bolsa para zanahoria</div></div>
-        <div class="producto-item"><div class="producto-codigo">27×92 · Naranja</div><div class="producto-nombre">Con y sin impresión</div></div>
-        <div class="producto-item"><div class="producto-codigo">29×95 · Natural</div><div class="producto-nombre">Bolsa para zanahoria</div></div>
-        <div class="producto-item"><div class="producto-codigo">30×95 · Natural</div><div class="producto-nombre">Tratada para impresión</div></div>
-        <div class="producto-item"><div class="producto-codigo">25×75 · Naranja</div><div class="producto-nombre">Bolsa para zanahoria</div></div>
-        <div class="producto-item"><div class="producto-codigo">+15 medidas</div><div class="producto-nombre">Otras medidas en natural y naranja</div></div>
-      </div>
+  <div class="segmento revelar" data-seg="stock">
+    <figure class="media r-4x3" data-foto="img/catalogo-stock.jpg
+Foto 4:3 — producto del segmento en existencia, sin marcas de clientes visibles."><img class="media-el" src="img/catalogo-stock.jpg" alt="En existencia" loading="lazy" decoding="async"><span class="media-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-4-9 4 9 4 9-4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg></span></figure>
+    <div><h3>En existencia</h3><p class="segmento-sub">Entrega inmediata</p>
+      <ul class="specs"><li><b>28×95</b><span>Naranja</span></li><li><b>27×92</b><span>Naranja, con o sin impresión</span></li><li><b>29×95</b><span>Natural</span></li><li><b>30×95</b><span>Natural tratada</span></li><li><b>25×75</b><span>Naranja</span></li><li><b>+15 medidas</b><span>Natural y naranja</span></li></ul>
     </div>
   </div>
-
 </section>
-
-<!-- CTA -->
-<section class="cta-final">
-  <h2 class="cta-titulo">¿No está <span>tu medida?</span></h2>
-  <p class="cta-desc">La fabricamos. Dinos producto, medida, calibre y cantidad.</p>
-  <a href="contacto.html" class="btn-primary">Solicitar cotización</a>
+<section class="cierre">
+  <figure class="media" data-foto="img/cierre.jpg
+Foto horizontal amplia: rollos de película o bolsas apiladas en bodega, listas para embarque. Se oscurece encima, así que puede ser con mucho detalle."><img class="media-el" src="img/cierre.jpg" alt="" loading="lazy" decoding="async"></figure>
+  <div class="cierre-in revelar">
+    <h2>¿No está tu medida?</h2>
+    <p>La fabricamos. Dinos producto, medida, calibre y cantidad.</p>
+    <div class="hero-acciones">
+      <a href="contacto.html" class="btn btn-claro">Solicitar cotización</a>
+      <a href="tel:+524111154776" class="btn btn-borde"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg>Llamar 411 115 4776</a>
+    </div>
+  </div>
 </section>
-
-<!-- FOOTER -->
 </main>
 <footer class="pie">
   <div class="pie-marca">
-    <div class="footer-logo">Plásticos <span>Cortazarenses</span></div>
+    <a href="index.html" class="nav-logo"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="8" fill="#0B1F3A"/><circle cx="20" cy="20" r="12" stroke="#8CC3EE" stroke-width="1.6"/><circle cx="20" cy="20" r="8" stroke="#2F80D0" stroke-width="1.2"/><text x="20" y="25.5" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="15" fill="#fff">P</text></svg><span class="nav-logo-text">Plásticos Cortazarenses<span>Empaques flexibles</span></span></a>
     <p>Fabricante de bolsa y película de polietileno en Cortazar, Guanajuato, desde 1970.</p>
   </div>
   <div>
     <div class="pie-titulo">Contacto</div>
-    <ul class="pie-lista">
-      <li><a class="tel-link" href="tel:+524111154776"><strong>411 115 4776</strong></a></li>
-      <li><span>Lunes a viernes · 8:00 – 18:00</span></li>
-      <li><span>Sábado · 8:00 – 13:00</span></li>
-      <li><span>Cortazar, Guanajuato, México</span></li>
+    <ul>
+      <li><a href="tel:+524111154776"><strong>411 115 4776</strong></a></li>
+      <li>Lunes a viernes · 8:00 – 18:00</li>
+      <li>Sábado · 8:00 – 13:00</li>
+      <li>Cortazar, Guanajuato</li>
+    </ul>
+  </div>
+  <div>
+    <div class="pie-titulo">Productos</div>
+    <ul>
+      <li><a href="productos.html#tipos">Tipos de bolsa y película</a></li>
+      <li><a href="productos.html#catalogo">Catálogo por mercado</a></li>
+      <li><a href="mercados.html">Mercados</a></li>
     </ul>
   </div>
   <div>
     <div class="pie-titulo">Empresa</div>
-    <ul class="pie-lista">
+    <ul>
       <li><a href="nosotros.html">Nosotros</a></li>
-      <li><a href="nosotros.html#por-que">¿Por qué nosotros?</a></li>
-      <li><a href="nosotros.html#clientes">Clientes</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </div>
-  <div>
-    <div class="pie-titulo">Qué fabricamos</div>
-    <ul class="pie-lista">
-      <li><a href="productos.html#tipos">Tipos de bolsa y película</a></li>
-      <li><a href="productos.html#catalogo">Catálogo por mercado</a></li>
-      <li><a href="mercados.html">Mercados</a></li>
+      <li><a href="nosotros.html#planta">La planta</a></li>
       <li><a href="contacto.html">Solicitar cotización</a></li>
     </ul>
   </div>
   <div class="pie-legal">
-    <span>© 2026 Plásticos Cortazarenses S.A. de C.V. · Todos los derechos reservados</span>
+    <span>© 2026 Plásticos Cortazarenses S.A. de C.V.</span>
     <a href="aviso-privacidad.html">Aviso de privacidad</a>
   </div>
 </footer>
-
-<script>
-  // Scroll fade-in
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  // Filtros
-  function filtrar(seg, btn) {
-    document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('activo'));
-    btn.classList.add('activo');
-    document.querySelectorAll('.segmento').forEach(s => {
-      s.style.display = (seg === 'todos' || s.dataset.seg === seg) ? 'block' : 'none';
-    });
-  }
-</script>
 <div class="barra-movil" role="navigation" aria-label="Acciones rápidas">
-  <a class="bm-llamar" href="tel:+524111154776"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span>Llamar</span></a>
-  <a class="bm-cotizar" href="contacto.html">Solicitar cotización</a>
+  <a class="bm-llamar" href="tel:+524111154776"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span>Llamar</span></a>
+  <a class="bm-cotizar" href="contacto.html">Cotizar</a>
 </div>
-<script src="ux.js"></script>
+<script src="pc.js"></script>
 </body>
 </html>
